@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">AndroidWTVersus</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+  <string name="app_name">WT Versus</string>
+  <string name="title_compare">Comparison</string>
+  <string name="title_statistics">Statistics</string>
+  <string name="title_feedback">Feedback</string>
+  <string name="aircrafts">Avia</string>
+  <string name="tanks">Army</string>
+  <string name="helis">Heli</string>
+  <string name="ships">Fleet</string>
 </resources>
