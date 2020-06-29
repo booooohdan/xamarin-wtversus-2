@@ -16,6 +16,6 @@ namespace AndroidWTVersus.DBEntities
     public class ArrayOfPlanes
     {
         [XmlElement(ElementName = "Planes", Namespace = "http://schemas.datacontract.org/2004/07/VehicleDataAccess")]
-        public List<Plane> PlanesList { get; set; }
+        public List<Plane> PlanesListApi { get; set; }
     }
 }

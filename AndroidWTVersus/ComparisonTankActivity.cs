@@ -19,14 +19,18 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Xamarin.Essentials;
+using Akavache;
+using System.Reactive.Linq;
 
 namespace AndroidWTVersus
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Theme = "@style/AppTheme")]
     public class ComparisonTankActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         #region initialization interface values
         TextView textMessage;
+        ArrayOfPlanes planes;
         #endregion
 
         #region initialization interface values
@@ -46,24 +50,38 @@ namespace AndroidWTVersus
             //Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             #endregion
 
-            ArrayOfPlanes planes = GetPlanesListFromApi();
 
-            string s = planes.PlanesList[120].Name;
+            //string s = planes.PlanesList[120].Name;
             textMessage = FindViewById<TextView>(Resource.Id.message);
-            textMessage.SetText(s, TextView.BufferType.Normal);
+            textMessage.SetText("Before Task", TextView.BufferType.Normal);
+            //  Task.Run(() => GetPlanesListFromApi());
+            FromCacheAsync().ConfigureAwait(false);
+
         }
 
-
-        private ArrayOfPlanes GetPlanesListFromApi()
+        async Task FromCacheAsync()
         {
-            string URL = context.Resources.GetString(Resource.String.apiPlanesUrl);
-            ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
-            XmlReader xReader = initial.ApiXmlReader(URL);
-            XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfPlanes));
-            ArrayOfPlanes planes = (ArrayOfPlanes)serializer.Deserialize(xReader);
-            return planes;
+            var arrayOfPlanesCached = await BlobCache.UserAccount.GetObject<ArrayOfPlanes>("cachedArrayOfPlanes");
+
+
+            RunOnUiThread(() => {
+                textMessage.SetText(arrayOfPlanesCached.PlanesListApi[100].Name, TextView.BufferType.Normal);
+            });
         }
 
+        //private void GetPlanesListFromApi()
+        //{
+        //    string URL = context.Resources.GetString(Resource.String.apiPlanesUrl);
+        //    ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
+        //    XmlReader xReader = initial.ApiXmlReader(URL);
+        //    XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfPlanes));
+        //    ArrayOfPlanes arrayOfPlanes = (ArrayOfPlanes)serializer.Deserialize(xReader);
+        //    planes = arrayOfPlanes;
+        //    RunOnUiThread(() =>
+        //    {
+        //        textMessage.SetText(planes.PlanesListApi[200].Name, TextView.BufferType.Normal);
+        //    });
+        //}
 
         #region Menu navigation items
 

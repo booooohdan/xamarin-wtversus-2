@@ -7,4 +7,8 @@
   <string name="tanks">Army</string>
   <string name="helis">Heli</string>
   <string name="ships">Fleet</string>
+  <string name="alertDialogConnectTitle">No internet connection</string>
+  <string name="alertDialogConnectMessage">Turn on the Internet to download data</string>
+  <string name="alertDialogConnectRetry">Retry</string>
+
 </resources>
