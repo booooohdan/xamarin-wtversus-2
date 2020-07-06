@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AndroidWTVersus.DBEntities
 {
-    class Ship
+    public class Ship
     {
         public int Id { get; set; }
         public int? VehicleId { get; set; }

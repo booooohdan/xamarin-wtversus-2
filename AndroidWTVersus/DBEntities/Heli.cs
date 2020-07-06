@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AndroidWTVersus.DBEntities
 {
-    class Heli
+    public class Heli
     {
         public int Id { get; set; }
         public int? VehicleId { get; set; }

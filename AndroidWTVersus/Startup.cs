@@ -1,56 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V7.App;
-using Android.Views;
 using Android.Widget;
 using AndroidWTVersus.DBEntities;
 using System.Reactive.Linq;
 using Akavache;
 using Plugin.Connectivity;
+using Android.Views;
+using Android.Content.PM;
 
 namespace AndroidWTVersus
-{
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+{   
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
     public class Startup:AppCompatActivity
     {
-        ArrayOfPlanes arrayOfPlanes;
-        Button button11;
-        TextView textView11;
-        Context context;
+        #region Variables
 
+        Context context;
+        ArrayOfPlanes arrayOfPlanes;
+        ArrayOfTanks arrayOfTanks;
+        ArrayOfHelis arrayOfHelis;
+        ArrayOfShips arrayOfShips;
+        TextView debugTextView;
+        #endregion
+
+        /// <summary>
+        /// Base Android OnCreate method. Entry point for app
+        /// </summary>
+        /// <param name="savedInstanceState"></param>
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.StartupLayout);
             context = Application.Context;
 
-            button11 = FindViewById<Button>(Resource.Id.button11);
-            textView11 = FindViewById<TextView>(Resource.Id.textView11);
-            textView11.SetText("Waiting...", TextView.BufferType.Normal);
+            debugTextView = FindViewById<TextView>(Resource.Id.textViewdebug); //show debug info
 
             CheckInternetConnection();
-            Task.Run(() => CheckIfDBCached().Wait());
         }
 
+        /// <summary>
+        /// Check if internet on
+        /// </summary>
         private void CheckInternetConnection()
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                textView11.SetText("no internet", TextView.BufferType.Normal);
+                debugTextView.SetText("no internet", TextView.BufferType.Normal);
                 AlertDialogWhenNoInternet();
+            }
+            else
+            {
+                Task.Run(() => CheckIfDBCached().Wait());
             }
         }
 
+        /// <summary>
+        /// Alert dialog initializer. Shows when no internet
+        /// </summary>
         private void AlertDialogWhenNoInternet()
         {
             string title = context.Resources.GetString(Resource.String.alertDialogConnectTitle);
@@ -63,36 +75,56 @@ namespace AndroidWTVersus
             alert.SetCancelable(false);
             alert.SetPositiveButton(retry, (senderAlert, args) =>
             {
-                base.Recreate();
+                CheckInternetConnection();
             });
 
             Dialog dialog = alert.Create();
             dialog.Show();
         }
 
+        /// <summary>
+        /// Check if cache have saved data. If have, then start to default main activity
+        /// </summary>
+        /// <returns>Task</returns>
         private async Task CheckIfDBCached()
         {
             try
             {
                 RunOnUiThread(() => {
-                    textView11.SetText("try", TextView.BufferType.Normal);
+                    debugTextView.SetText("check cache", TextView.BufferType.Normal);
                 });
+                Registrations.Start("WarThinderVersusAkavacheCache");
                 var arrayOfPlanesCached = await BlobCache.UserAccount.GetObject<ArrayOfPlanes>("cachedArrayOfPlanes");
+                var arrayOfTanksCached = await BlobCache.UserAccount.GetObject<ArrayOfPlanes>("cachedArrayOfTanks");
+                var arrayOfHelisCached = await BlobCache.UserAccount.GetObject<ArrayOfPlanes>("cachedArrayOfHelis");
+                var arrayOfShipsCached = await BlobCache.UserAccount.GetObject<ArrayOfPlanes>("cachedArrayOfShips");
+
+                MoveToNextActivity();
             }
             catch (KeyNotFoundException ex)
             {
                 RunOnUiThread(() => {
-                    textView11.SetText("catch", TextView.BufferType.Normal);
+                    debugTextView.SetText("cache failed", TextView.BufferType.Normal);
+                    AlertDialogWhenDataLoading();
                 });
-                await GetPlanesListFromApiAsync();
+                await Task.Run(() => GetPlanesListFromApiAsync());
+                await Task.Run(() => GetTanksListFromApiAsync());
+                await Task.Run(() => GetHelisListFromApiAsync());
+                await Task.Run(() => GetShipsListFromApiAsync());
+                Task.WaitAll();
+                MoveToNextActivity();
+
             }
-
         }
-
+        
+        /// <summary>
+        /// Connect to API, load planes and add to cache
+        /// </summary>
+        /// <returns>Task</returns>
         private async Task GetPlanesListFromApiAsync()
         {
             RunOnUiThread(() => {
-                textView11.SetText("apistart", TextView.BufferType.Normal);
+                debugTextView.SetText("loading planes", TextView.BufferType.Normal);
             });
             string URL = context.Resources.GetString(Resource.String.apiPlanesUrl);
             ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
@@ -100,14 +132,86 @@ namespace AndroidWTVersus
             XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfPlanes));
             arrayOfPlanes = (ArrayOfPlanes)serializer.Deserialize(xReader);
 
-            Registrations.Start("AkavacheExperiment");
-
             await BlobCache.UserAccount.InsertObject("cachedArrayOfPlanes", arrayOfPlanes);
-            RunOnUiThread(() => {
-                textView11.SetText("apiend", TextView.BufferType.Normal);
-            });
         }
 
+        /// <summary>
+        /// Connect to API, load tanks and add to cache
+        /// </summary>
+        /// <returns>Task</returns>
+        private async Task GetTanksListFromApiAsync()
+        {
+            RunOnUiThread(() => {
+                debugTextView.SetText("loading tanks", TextView.BufferType.Normal);
+            });
+            string URL = context.Resources.GetString(Resource.String.apiTanksUrl);
+            ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
+            XmlReader xReader = initial.ApiXmlReader(URL);
+            XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfTanks));
+            arrayOfTanks = (ArrayOfTanks)serializer.Deserialize(xReader);
 
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfTanks", arrayOfTanks);
+        }
+
+        /// <summary>
+        /// Connect to API, load helis and add to cache
+        /// </summary>
+        /// <returns>Task</returns>
+        private async Task GetHelisListFromApiAsync()
+        {
+            RunOnUiThread(() => {
+                debugTextView.SetText("loading helis", TextView.BufferType.Normal);
+            });
+            string URL = context.Resources.GetString(Resource.String.apiHelisUrl);
+            ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
+            XmlReader xReader = initial.ApiXmlReader(URL);
+            XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfHelis));
+            arrayOfHelis = (ArrayOfHelis)serializer.Deserialize(xReader);
+
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfHelis", arrayOfHelis);
+        }
+
+        /// <summary>
+        /// Connect to API, load ships and add to cache
+        /// </summary>
+        /// <returns>Task</returns>
+        private async Task GetShipsListFromApiAsync()
+        {
+            RunOnUiThread(() => {
+                debugTextView.SetText("loading your mom", TextView.BufferType.Normal);
+            });
+            string URL = context.Resources.GetString(Resource.String.apiShipsUrl);
+            ApiXmlReaderInitial initial = new ApiXmlReaderInitial();
+            XmlReader xReader = initial.ApiXmlReader(URL);
+            XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfShips));
+            arrayOfShips = (ArrayOfShips)serializer.Deserialize(xReader);
+
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfShips", arrayOfShips);
+        }
+
+        /// <summary>
+        /// Alert dialog initializer. Shows during app load data from API
+        /// </summary>
+        private void AlertDialogWhenDataLoading()
+        {
+            LayoutInflater layoutInflater = LayoutInflater.From(this);
+            View mview = layoutInflater.Inflate(Resource.Layout._alertDialogLoading, null);
+            Android.App.AlertDialog.Builder alertDialogBuilder = new Android.App.AlertDialog.Builder(this);
+            alertDialogBuilder.SetView(mview);
+            Android.App.AlertDialog alertDialogAndroid = alertDialogBuilder.Create();
+            alertDialogAndroid.SetCancelable(false);
+            alertDialogAndroid.Show();
+        }
+
+        /// <summary>
+        /// Open default activity when all data loaded. Remove animation between activity 
+        /// </summary>
+        private void MoveToNextActivity()
+        {
+            var intent = new Intent(this, typeof(ComparisonTankActivity));
+            intent.AddFlags(ActivityFlags.NoAnimation);
+            StartActivity(intent);
+            Finish();
+        }
     }
 }

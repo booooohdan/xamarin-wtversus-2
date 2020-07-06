@@ -3,59 +3,1190 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    xmlns:p4="http://xamarin.com/mono/android/designer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:gridSpec="1|16|#0093eeff|K:#ee8700ff:16,l:72,l:16,r|S:#83ee00ff:16,0,l:16,56,l:16,0,r"
-    android:background="@color/colorMainBackground">
-    <LinearLayout
-        android:orientation="horizontal"
+    android:background="@color/colorMainBackground"
+    android:theme="@style/AppTheme">
+
+    <include
+        layout="@layout/_topMenuButtons"/>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40sp"
-        android:id="@+id/topMenuContainer"
-        android:background="@color/colorPrimary">
-        <Button
-            android:id="@+id/topMenuAircraftsButton"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="25"
-            android:text="@string/aircrafts"
-            style="@style/TopMenuBottons"/>
-        <Button
-            android:id="@+id/topMenuTanksButton"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="25"
-            android:text="@string/tanks"
-            style="@style/TopMenuBottons"
-            android:textColor="@color/colorPrimary"
-            android:background="@drawable/ButtonAsTabShape" />
-        <Button
-            android:id="@+id/topMenuHeliButton"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="25"
-            android:text="@string/helis"
-            style="@style/TopMenuBottons" />
-        <Button
-            android:id="@+id/topMenuShipsButton"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="25"
-            android:text="@string/ships"
-            style="@style/TopMenuBottons" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topMenuContainer"
+        android:layout_above="@+id/navigation"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/app_name" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+                <ImageView
+                    android:src="@drawable/us_m1a2_abrams"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivT_Tank1"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:src="@drawable/germ_leopard_2a5"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivT_Tank2"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="M1A1 Abrams"
+                    android:textSize="14sp"
+                    android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="37sp"
+                    android:id="@+id/searchableButton1"
+                    android:background="@android:color/transparent" />
+                <Button
+                    android:text="Leopard 2A5"
+                    android:textSize="14sp"
+                    android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="37sp"
+                    android:id="@+id/searchableButton2"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="10.7"
+                    android:id="@+id/tvT_BattleRating1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battleRating" />
+                <TextView
+                    android:text="10.7"
+                    android:id="@+id/tvT_BattleRating2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1992"
+                    android:id="@+id/tvT_FirstYear1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tankFirstYear" />
+                <TextView
+                    android:text="1995"
+                    android:id="@+id/tvT_FirstYear2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="12935"
+                    android:id="@+id/tvT_RepairCost1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repairCost" />
+                <TextView
+                    android:text="17330"
+                    android:id="@+id/tvT_RepairCost2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/RedLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weaponSpecification"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+>
+                <TextView
+                    android:text="120 mm M256 cannon"
+                    android:id="@+id/tvT_Cannon1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="120 mm Rheinmetall L44"
+                    android:id="@+id/tvT_Cannon2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="491 mm"
+                    android:id="@+id/tvT_Penetration1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/armorPenetration" />
+                <TextView
+                    android:text="481 mm"
+                    android:id="@+id/tvT_Penetration2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ShellAP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAP1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:src="@drawable/ShellAPHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPHE1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHE1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPCR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPCR1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPDS1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPFSDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPFSDS1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEAT1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEATFS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEATFS1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellShrapnel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellShrapnel1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHESH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHESH1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGM1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMHE1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMHEVT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMHEVT1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMTandem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMTandem1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellVOG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellVOG1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSSM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSSM1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEATGRENADE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEATGRENADE1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEVT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEVT1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSAM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSAM1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSmoke1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ShellAP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAP2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:src="@drawable/ShellAPHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPHE2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHE2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPCR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPCR2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPDS2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellAPFSDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellAPFSDS2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEAT2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEATFS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEATFS2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellShrapnel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellShrapnel2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHESH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHESH2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGM2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMHE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMHE2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMHEVT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMHEVT2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellATGMTandem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellATGMTandem2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellVOG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellVOG2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSSM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSSM2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEATGRENADE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEATGRENADE2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellHEVT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellHEVT2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSAM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSAM2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ShellSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ShellSmoke2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp">
+                <TextView
+                    android:text="1670 m/s"
+                    android:id="@+id/tvT_MuzzleVelocity1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/muzzleVelocity" />
+                <TextView
+                    android:text="1640 m/s"
+                    android:id="@+id/tvT_MuzzleVelocity2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="6 s"
+                    android:id="@+id/tvT_ReloadTime1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reloadTime" />
+                <TextView
+                android:text="6 s"
+                    android:id="@+id/tvT_ReloadTime2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/tenDegree"
+                    android:id="@+id/tvT_GunDepression1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gunDepression" />
+                <TextView
+                    android:text="@string/nineDegree"
+                    android:id="@+id/tvT_GunDepression2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <TextView
+                style="@style/RedLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/armorSpecification"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/NVDCommander"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_NVDCommander1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ThermalCommander"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ThermalCommander1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/NVDGunner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_NVDGunner1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ThermalGunner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ThermalGunner1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/IRSpotlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_IRSpotlight1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ExhaustSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ExhaustSmoke1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GrenadeSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_GrenadeSmoke1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AddOnArmor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AddOnArmor1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ReactiveArmor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ReactiveArmor1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AutoLoader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AutoLoader1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AAMachineGun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AAMachineGun1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Stabilizer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Stabilizer1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HullBreak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_HullBreak1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Hydropneumatic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Hydropneumatic1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Amphibious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Amphibious1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GroundToAirRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AirSearchRadar1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/LockAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AirLockRadar1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GroundToTankRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_TankSearchRadar1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/NVDCommander"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_NVDCommander2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ThermalCommander"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ThermalCommander2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/NVDGunner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_NVDGunner2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ThermalGunner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ThermalGunner2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/IRSpotlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_IRSpotlight2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ExhaustSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ExhaustSmoke2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GrenadeSmoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_GrenadeSmoke2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AddOnArmor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AddOnArmor2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/ReactiveArmor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_ReactiveArmor2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AutoLoader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AutoLoader2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AAMachineGun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AAMachineGun2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Stabilizer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Stabilizer2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HullBreak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_HullBreak2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Hydropneumatic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Hydropneumatic2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Amphibious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_Amphibious2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GroundToAirRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AirSearchRadar2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/LockAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_AirLockRadar2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/GroundToTankRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_TankSearchRadar2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="620 mm"
+                    android:id="@+id/tvT_ReducedArmorFrontTurret1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reducedArmorFrontTurret" />
+                <TextView
+                    android:text="750 mm"
+                    android:id="@+id/tvT_ReducedArmorFrontTurret2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="400 mm"
+                    android:id="@+id/tvT_ReducedArmorTopSheet1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reducedArmorTopSheet" />
+                <TextView
+                    android:text="400 mm"
+                    android:id="@+id/tvT_ReducedArmorTopSheet2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="360 mm"
+                    android:id="@+id/tvT_ReducedArmorBottomSheet1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reducedArmorBottomSheet" />
+                <TextView
+                    android:text="150 mm"
+                    android:id="@+id/tvT_ReducedArmorBottomSheet2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>
+
+            <TextView
+                style="@style/RedLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ridingSpecifications"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="68 km/h"
+                    android:id="@+id/tvT_MaxSpeedAtRoad1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxSpeedAtRoad" />
+                <TextView
+                    android:text="68 km/h"
+                    android:id="@+id/tvT_MaxSpeedAtRoad2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="49 km/h"
+                    android:id="@+id/tvT_MaxSpeedAtTerrain1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxSpeedAtTerrain" />
+                <TextView
+                    android:text="50 km/h"
+                    android:id="@+id/tvT_MaxSpeedAtTerrain2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="40 km/h"
+                    android:id="@+id/tvT_MaxReverseSpeed1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxReverseSpeed" />
+                <TextView
+                    android:text="31 km/h"
+                    android:id="@+id/tvT_MaxReverseSpeed2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="12s"
+                    android:id="@+id/tvT_AccelerationTo1001"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accelerationTo100" />
+                <TextView
+                    android:text="13 s"
+                    android:id="@+id/tvT_AccelerationTo1002"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="24 s"
+                    android:id="@+id/tvT_TurnTurretTime1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/turnTurretTime" />
+                <TextView
+                    android:text="11 s"
+                    android:id="@+id/tvT_TurnTurretTime2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="17 s"
+                    android:id="@+id/tvT_TurnHullTime1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/turnHullTime" />
+                <TextView
+                    android:text="11 s"
+                    android:id="@+id/tvT_TurnHullTime2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1519 h.p."
+                    android:id="@+id/tvT_EnginePower1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enginePower" />
+                <TextView
+                    android:text="1500 h.p."
+                    android:id="@+id/tvT_EnginePower2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="61.7 t"
+                    android:id="@+id/tvT_Weight1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight" />
+                <TextView
+                    android:text="59.5 t"
+                    android:id="@+id/tvT_Weight2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -66,6 +1197,6 @@
         android:background="?android:attr/windowBackground"
         android:layout_alignParentBottom="true"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"/>
 
 </RelativeLayout>

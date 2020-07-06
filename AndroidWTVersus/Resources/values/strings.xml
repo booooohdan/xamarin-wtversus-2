@@ -8,7 +8,42 @@
   <string name="helis">Heli</string>
   <string name="ships">Fleet</string>
   <string name="alertDialogConnectTitle">No internet connection</string>
-  <string name="alertDialogConnectMessage">Turn on the Internet to download data</string>
+  <string name="alertDialogConnectMessage">Turn on the Internet to continue</string>
   <string name="alertDialogConnectRetry">Retry</string>
+  <string name="alertDialogLoadingTitle">Loading vehicle data</string>
+  <string name="alertDialogLoadingMessage">This may take up to a 15 sec</string>
+  <string name="select">Select item</string>
+  <string name="battleRating">BattleRating</string>
+  <string name="tenDegree">-10 °</string>
+  <string name="nineDegree">-9 °</string>
+
+  <string name="mm">&#160;mm</string>
+  <string name="s">&#160;s</string>
+  <string name="m_s">&#160;m/s</string>
+  <string name="degree">&#160;°</string>
+  <string name="km_h">&#160;km/h</string>
+  <string name="h_p">&#160;h.p.</string>
+  <string name="t">&#160;t</string>
+
+  <string name="tankFirstYear">First ride</string>
+  <string name="repairCost">Repair cost</string>
+  <string name="weaponSpecification">WEAPON SPECIFICATIONS</string>
+  <string name="armorPenetration">Armor penetration</string>
+  <string name="muzzleVelocity">Muzzle velocity</string>
+  <string name="reloadTime">Reload time</string>
+  <string name="gunDepression">Gun depression</string>
+  <string name="armorSpecification">ARMOR SPECIFICATIONS</string>
+  <string name="reducedArmorFrontTurret">Frontal armor panel of the turret</string>
+  <string name="reducedArmorTopSheet">Frontal armor of upper hull plate</string>
+  <string name="reducedArmorBottomSheet">Frontal armor of lower hull plate</string>
+  <string name="ridingSpecifications">Riding specifications</string>
+  <string name="maxSpeedAtRoad">Max speed on highway</string>
+  <string name="maxSpeedAtTerrain">Max speed on cross-country</string>
+  <string name="maxReverseSpeed">Reverse speed</string>
+  <string name="accelerationTo100">100 meters acceleration</string>
+  <string name="turnTurretTime">Turret turnaround</string>
+  <string name="turnHullTime">Hull turnaround</string>
+  <string name="enginePower">Engine power</string>
+  <string name="weight">Weight</string>
 
 </resources>
