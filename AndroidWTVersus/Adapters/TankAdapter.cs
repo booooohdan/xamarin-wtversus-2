@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using Android.App;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
 using Object = Java.Lang.Object;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using AndroidWTVersus.DBEntities;
+using Android.Graphics;
 
 namespace AndroidWTVersus.Adapters
 {

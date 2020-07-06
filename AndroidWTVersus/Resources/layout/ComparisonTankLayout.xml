@@ -52,22 +52,24 @@
                 android:layout_height="wrap_content">
                 <Button
                     android:text="M1A1 Abrams"
-                    android:textSize="14sp"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="37sp"
                     android:id="@+id/searchableButton1"
-                    android:background="@android:color/transparent" />
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/symbols"
+                    app:fontFamily="@font/symbols" />
                 <Button
                     android:text="Leopard 2A5"
-                    android:textSize="14sp"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="37sp"
                     android:id="@+id/searchableButton2"
-                    android:background="@android:color/transparent"/>
+                    android:background="@android:color/transparent"
+                                        android:fontFamily="@font/symbols"
+                    app:fontFamily="@font/symbols" />
 
             </LinearLayout>
 
@@ -158,57 +160,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/weaponSpecification"
                 android:layout_marginTop="10dp" />
-
-            <LinearLayout
-                android:background="#ffffffff"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
->
-                <TextView
-                    android:text="120 mm M256 cannon"
-                    android:id="@+id/tvT_Cannon1"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="50"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:text="120 mm Rheinmetall L44"
-                    android:id="@+id/tvT_Cannon2"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="50"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="#ffffffff"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:text="491 mm"
-                    android:id="@+id/tvT_Penetration1"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="25"
-                    android:layout_height="wrap_content"
- />
-                <TextView
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="50"
-                    android:layout_height="wrap_content"
-                    android:text="@string/armorPenetration" />
-                <TextView
-                    android:text="481 mm"
-                    android:id="@+id/tvT_Penetration2"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="25"
-                    android:layout_height="wrap_content"
- />
-            </LinearLayout>
 
             <LinearLayout
                 android:background="#ffffffff"
@@ -509,7 +460,57 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp">
+>
+                <TextView
+                    android:text="120 mm M256 cannon"
+                    android:id="@+id/tvT_Cannon1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="120 mm Rheinmetall L44"
+                    android:id="@+id/tvT_Cannon2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="491 mm"
+                    android:id="@+id/tvT_Penetration1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/armorPenetration" />
+                <TextView
+                    android:text="481 mm"
+                    android:id="@+id/tvT_Penetration2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TextView
                     android:text="1670 m/s"
                     android:id="@+id/tvT_MuzzleVelocity1"

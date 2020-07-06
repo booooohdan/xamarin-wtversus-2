@@ -22,6 +22,7 @@
         android:id="@+id/textViewRow"
         android:textColor="@android:color/black"
         style="@android:style/TextAppearance.Medium"
+        android:fontFamily="@font/symbols"
         android:background="#ffffd54f"
         android:layout_gravity="center" />
 

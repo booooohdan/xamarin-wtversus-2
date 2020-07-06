@@ -22,7 +22,7 @@ namespace AndroidWTVersus
     [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
     public class ComparisonTankActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
-        #region initialization interface values
+        #region initialization View values
 
         ImageView ivT_Tank1;
         ImageView ivT_Tank2;
@@ -155,7 +155,7 @@ namespace AndroidWTVersus
 
         #endregion
 
-        #region Initialization non interface values
+        #region Initialization non View values
 
         Context context;
         ArrayOfTanks arrayOfTanks;
@@ -165,8 +165,8 @@ namespace AndroidWTVersus
         Dialog dialog;
         LayoutInflater inflater;
         View view;
-
         TextView.BufferType TextNormal;
+
         string mm;
         string s;
         string m_s;
@@ -177,15 +177,19 @@ namespace AndroidWTVersus
         string br;
         #endregion
 
+        /// <summary>
+        /// Base Android OnCreate method. Entry point for app
+        /// </summary>
+        /// <param name="savedInstanceState"></param>
         protected override void OnCreate(Bundle savedInstanceState)
         {
             #region Initialization required elements
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ComparisonTankLayout);
             context = Application.Context;
+            //Bottom menu initialization
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.SetOnNavigationItemSelectedListener(this);
-            //Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             #endregion
 
             BindingInterfaceElementsToCode();
@@ -196,11 +200,17 @@ namespace AndroidWTVersus
             searchableButton2.Click += SearchableButton2_Click;
         }
 
+        /// <summary>
+        /// Load cached List of tanks
+        /// </summary>
         private async Task FillListFromCacheAsync()
         {
             arrayOfTanks = await BlobCache.UserAccount.GetObject<ArrayOfTanks>("cachedArrayOfTanks");
         }
 
+        /// <summary>
+        /// Search Dialog Initialization
+        /// </summary>
         private void SearchDialogInitialization()
         {
             dialog = new Dialog(this);
@@ -221,6 +231,8 @@ namespace AndroidWTVersus
 
             searchView.QueryTextChange += SearchView_QueryTextChange;
             listView.ItemClick += ListView1_ItemClick;
+
+            //scroll List to 3 position
             listView.SetSelection(2);
 
             dialog.SetContentView(view);
@@ -233,6 +245,8 @@ namespace AndroidWTVersus
 
             searchView.QueryTextChange += SearchView_QueryTextChange;
             listView.ItemClick += ListView2_ItemClick;
+
+            //scroll List to 3 position
             listView.SetSelection(2);
 
             dialog.SetContentView(view);
@@ -241,6 +255,7 @@ namespace AndroidWTVersus
 
         private void SearchView_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
+            //Filtering SearchView text
             tankAdapter.Filter.InvokeFilter(e.NewText);
         }
 
@@ -263,6 +278,10 @@ namespace AndroidWTVersus
             //CompareLeftAndRight();
         }
 
+        /// <summary>
+        /// Set data from List tanks to left part images
+        /// </summary>
+        /// <param name="e"></param>
         private void SetImageToLeft(AdapterView.ItemClickEventArgs e)
         {
             ImageService.Instance.LoadUrl(tankAdapter[e.Position].Image)
@@ -310,6 +329,10 @@ namespace AndroidWTVersus
             ivT_AirLockRadar1.Visibility = tankAdapter[e.Position].AirLockRadar ? ViewStates.Visible : ViewStates.Gone;
         }
 
+        /// <summary>
+        /// Set data from List tanks to right part images
+        /// </summary>
+        /// <param name="e"></param>
         private void SetImageToRight(AdapterView.ItemClickEventArgs e)
         {
             ImageService.Instance.LoadUrl(tankAdapter[e.Position].Image)
@@ -357,18 +380,21 @@ namespace AndroidWTVersus
             ivT_AirLockRadar2.Visibility = tankAdapter[e.Position].AirLockRadar ? ViewStates.Visible : ViewStates.Gone;
         }
 
+        /// <summary>
+        /// Set data from List tanks to left part texts
+        /// </summary>
+        /// <param name="e"></param>
         private void SetTextToLeft(AdapterView.ItemClickEventArgs e)
         {
             searchableButton1.SetText(tankAdapter[e.Position].Name + "", TextNormal);
 
             br = String.Format("{0:F1}", tankAdapter[e.Position].BR);
             tvT_BattleRating1.SetText(br, TextNormal);
-
             tvT_FirstYear1.SetText(tankAdapter[e.Position].FirstRideYear + "", TextNormal);
             tvT_RepairCost1.SetText(tankAdapter[e.Position].RepairCost + "", TextNormal);
-            tvT_Cannon1.SetText(tankAdapter[e.Position].Cannon + "", TextNormal);
-            tvT_Penetration1.SetText(tankAdapter[e.Position].Penetration + mm, TextNormal);
 
+            tvT_Cannon1.SetText(tankAdapter[e.Position].Cannon.Replace("<br>", "\n") + "", TextNormal);
+            tvT_Penetration1.SetText(tankAdapter[e.Position].Penetration + mm, TextNormal);
             tvT_MuzzleVelocity1.SetText(tankAdapter[e.Position].ShellSpeed + m_s, TextNormal);
             tvT_ReloadTime1.SetText(tankAdapter[e.Position].ReloadTime + s, TextNormal);
             tvT_GunDepression1.SetText(tankAdapter[e.Position].DownAimAngle + degree, TextNormal);
@@ -387,18 +413,21 @@ namespace AndroidWTVersus
             tvT_Weight1.SetText(tankAdapter[e.Position].Weight + t, TextNormal);
         }
 
+        /// <summary>
+        /// Set data from List tanks to right part texts
+        /// </summary>
+        /// <param name="e"></param>
         private void SetTextToRight(AdapterView.ItemClickEventArgs e)
         {
             searchableButton2.SetText(tankAdapter[e.Position].Name + "", TextNormal);
 
             br = String.Format("{0:F1}", tankAdapter[e.Position].BR);
             tvT_BattleRating2.SetText(br, TextNormal);
-
             tvT_FirstYear2.SetText(tankAdapter[e.Position].FirstRideYear + "", TextNormal);
             tvT_RepairCost2.SetText(tankAdapter[e.Position].RepairCost + "", TextNormal);
-            tvT_Cannon2.SetText(tankAdapter[e.Position].Cannon + "", TextNormal);
-            tvT_Penetration2.SetText(tankAdapter[e.Position].Penetration + mm, TextNormal);
 
+            tvT_Cannon2.SetText(tankAdapter[e.Position].Cannon.Replace("<br>", "\n") + "", TextNormal);
+            tvT_Penetration2.SetText(tankAdapter[e.Position].Penetration + mm, TextNormal);
             tvT_MuzzleVelocity2.SetText(tankAdapter[e.Position].ShellSpeed + m_s, TextNormal);
             tvT_ReloadTime2.SetText(tankAdapter[e.Position].ReloadTime + s, TextNormal);
             tvT_GunDepression2.SetText(tankAdapter[e.Position].DownAimAngle + degree, TextNormal);
@@ -417,6 +446,9 @@ namespace AndroidWTVersus
             tvT_Weight2.SetText(tankAdapter[e.Position].Weight + t, TextNormal);
         }
 
+        /// <summary>
+        /// Describes all strings to compare
+        /// </summary>
         private void LetsCompare()
         {
             CompareWhenLowIsGood(tvT_RepairCost1, tvT_RepairCost2);
@@ -439,6 +471,11 @@ namespace AndroidWTVersus
             CompareWhenLowIsGood(tvT_Weight1, tvT_Weight2);
         }
 
+        /// <summary>
+        /// Change background to green when data is higher
+        /// </summary>
+        /// <param name="textViewLeft">Left TextView</param>
+        /// <param name="textViewRight">Right TextView</param>
         private void CompareWhenHighIsGood(TextView textViewLeft, TextView textViewRight)
         {
             string textView1 = textViewLeft.Text;
@@ -467,6 +504,11 @@ namespace AndroidWTVersus
             }
         }
 
+        /// <summary>
+        /// Change background to green when data is lower
+        /// </summary>
+        /// <param name="textViewLeft">Left TextView</param>
+        /// <param name="textViewRight">Right TextView</param>
         private void CompareWhenLowIsGood(TextView textViewLeft, TextView textViewRight)
         {
             string textView1 = textViewLeft.Text;
@@ -495,8 +537,11 @@ namespace AndroidWTVersus
             }
         }
 
-        #region Menu navigation items
-
+        /// <summary>
+        /// Menu navigation method
+        /// </summary>
+        /// <param name="item">Menu item</param>
+        /// <returns></returns>
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -510,8 +555,10 @@ namespace AndroidWTVersus
             }
             return false;
         }
-        #endregion
 
+        /// <summary>
+        /// Bind all views from xml to code
+        /// </summary>
         private void BindingInterfaceElementsToCode()
         {
             TextNormal = TextView.BufferType.Normal;
