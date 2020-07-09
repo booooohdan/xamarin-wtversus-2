@@ -12,7 +12,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace AndroidWTVersus.DBEntities
+namespace AndroidWTVersus.XmlHandler
 {
     public class ApiXmlReaderInitial
     {

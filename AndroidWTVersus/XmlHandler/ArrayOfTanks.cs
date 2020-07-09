@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using AndroidWTVersus.Models;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace AndroidWTVersus.DBEntities
+namespace AndroidWTVersus.XmlHandler
 {
     [XmlRoot(ElementName = "ArrayOfTanks", Namespace = "http://schemas.datacontract.org/2004/07/VehicleDataAccess")]
     public class ArrayOfTanks

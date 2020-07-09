@@ -6,8 +6,11 @@ using Android.Views;
 using Android.Widget;
 using Java.Lang;
 using Object = Java.Lang.Object;
-using AndroidWTVersus.DBEntities;
 using Android.Graphics;
+using FFImageLoading;
+using FFImageLoading.Work;
+using Android.Media;
+using AndroidWTVersus.Models;
 
 namespace AndroidWTVersus.Adapters
 {
@@ -36,57 +39,74 @@ namespace AndroidWTVersus.Adapters
 
             var tanks = _items[position];
 
-            var nameView = view.FindViewById<TextView>(Resource.Id.textViewRow);
             var imageView = view.FindViewById<ImageView>(Resource.Id.imageViewRow);
+            var relativeViewRow = view.FindViewById<RelativeLayout>(Resource.Id.relativeViewRow);
+            var nameView = view.FindViewById<TextView>(Resource.Id.nameViewRow);
+            var brViewRow = view.FindViewById<TextView>(Resource.Id.brViewRow);
+            var rankViewRow = view.FindViewById<TextView>(Resource.Id.rankViewRow);
+            var repairViewRow = view.FindViewById<TextView>(Resource.Id.repairViewRow);
 
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 
             nameView.Text = tanks.Name;
+            rankViewRow.Text = "Rank: "+tanks.Rank;
+            brViewRow.Text = System.String.Format("{0:F1}", tanks.BR);
+            repairViewRow.Text = "Repair: " + tanks.RepairCost.ToString();
+
 
             switch (tanks.Nation)
             {
                 case "USA":
-                    imageView.SetImageResource(Resource.Drawable.USA);
+                    //imageView.SetImageResource(Resource.Drawable.USA);
+                    ImageService.Instance.LoadCompiledResource("USA").Into(imageView);
                     break;
                 case "Germany":
-                    imageView.SetImageResource(Resource.Drawable.Germany);
+                    //imageView.SetImageResource(Resource.Drawable.Germany);
+                    ImageService.Instance.LoadCompiledResource("Germany").Into(imageView);
                     break;
                 case "USSR":
-                    imageView.SetImageResource(Resource.Drawable.USSR);
+                    //imageView.SetImageResource(Resource.Drawable.USSR);
+                    ImageService.Instance.LoadCompiledResource("USSR").Into(imageView);
                     break;
                 case "Britain":
-                    imageView.SetImageResource(Resource.Drawable.Britain);
+                    //imageView.SetImageResource(Resource.Drawable.Britain);
+                    ImageService.Instance.LoadCompiledResource("Britain").Into(imageView);
                     break;
                 case "Japan":
-                    imageView.SetImageResource(Resource.Drawable.Japan);
+                    //imageView.SetImageResource(Resource.Drawable.Japan);
+                    ImageService.Instance.LoadCompiledResource("Japan").Into(imageView);
                     break;
                 case "Italy":
-                    imageView.SetImageResource(Resource.Drawable.Italy);
+                    //imageView.SetImageResource(Resource.Drawable.Italy);
+                    ImageService.Instance.LoadCompiledResource("Italy").Into(imageView);
                     break;
                 case "France":
-                    imageView.SetImageResource(Resource.Drawable.France);
+                    //imageView.SetImageResource(Resource.Drawable.France);
+                    ImageService.Instance.LoadCompiledResource("France").Into(imageView);
                     break;
                 case "China":
-                    imageView.SetImageResource(Resource.Drawable.China);
+                    //imageView.SetImageResource(Resource.Drawable.China);
+                    ImageService.Instance.LoadCompiledResource("China").Into(imageView);
                     break;
                 case "Sweden":
-                    imageView.SetImageResource(Resource.Drawable.Sweden);
+                    //imageView.SetImageResource(Resource.Drawable.Sweden);
+                    ImageService.Instance.LoadCompiledResource("Sweden").Into(imageView);
                     break;
             }
 
             switch (tanks.Type)
             {
                 case "Premium":
-                    nameView.SetBackgroundColor(Android.Graphics.Color.LightGoldenrodYellow);
-                    imageView.SetBackgroundColor(Android.Graphics.Color.LightGoldenrodYellow);
+                    relativeViewRow.SetBackgroundColor(Color.LightGoldenrodYellow);
+                    relativeViewRow.SetBackgroundColor(Color.LightGoldenrodYellow);
                     break;
                 case "Promotional":
-                    nameView.SetBackgroundColor(Android.Graphics.Color.LightGoldenrodYellow);
-                    imageView.SetBackgroundColor(Android.Graphics.Color.LightGoldenrodYellow);
+                    relativeViewRow.SetBackgroundColor(Color.LightGoldenrodYellow);
+                    relativeViewRow.SetBackgroundColor(Color.LightGoldenrodYellow);
                     break;
                 case "Usual":
-                    nameView.SetBackgroundColor(Android.Graphics.Color.Transparent);
-                    imageView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+                    relativeViewRow.SetBackgroundColor(Color.Transparent);
+                    relativeViewRow.SetBackgroundColor(Color.Transparent);
                     break;
             }
 

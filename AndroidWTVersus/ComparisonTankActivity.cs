@@ -1,20 +1,21 @@
-﻿using Android.App;
+﻿using Akavache;
+using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using AndroidWTVersus.DBEntities;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Akavache;
-using System.Reactive.Linq;
-using Android.Content.PM;
+using AndroidWTVersus.Adapters;
+using AndroidWTVersus.Comparison;
+using AndroidWTVersus.XmlHandler;
 using FFImageLoading;
 using FFImageLoading.Work;
-using AndroidWTVersus.Adapters;
+using System;
+using System.Linq;
+using System.Reactive.Linq;
+using System.Threading.Tasks;
 using String = System.String;
 
 namespace AndroidWTVersus
@@ -451,90 +452,35 @@ namespace AndroidWTVersus
         /// </summary>
         private void LetsCompare()
         {
-            CompareWhenLowIsGood(tvT_RepairCost1, tvT_RepairCost2);
-            CompareWhenHighIsGood(tvT_FirstYear1, tvT_FirstYear2);
-            CompareWhenLowIsGood(tvT_BattleRating1, tvT_BattleRating2);
-            CompareWhenHighIsGood(tvT_Penetration1, tvT_Penetration2);
-            CompareWhenHighIsGood(tvT_MuzzleVelocity1, tvT_MuzzleVelocity2);
-            CompareWhenLowIsGood(tvT_ReloadTime1, tvT_ReloadTime2);
-            CompareWhenHighIsGood(tvT_GunDepression1, tvT_GunDepression2);
-            CompareWhenHighIsGood(tvT_ReducedArmorFrontTurret1, tvT_ReducedArmorFrontTurret2);
-            CompareWhenHighIsGood(tvT_ReducedArmorTopSheet1, tvT_ReducedArmorTopSheet2);
-            CompareWhenHighIsGood(tvT_ReducedArmorBottomSheet1, tvT_ReducedArmorBottomSheet2);
-            CompareWhenHighIsGood(tvT_MaxSpeedAtRoad1, tvT_MaxSpeedAtRoad2);
-            CompareWhenHighIsGood(tvT_MaxSpeedAtTerrain1, tvT_MaxSpeedAtTerrain2);
-            CompareWhenHighIsGood(tvT_MaxReverseSpeed1, tvT_MaxReverseSpeed2);
-            CompareWhenLowIsGood(tvT_AccelerationTo1001, tvT_AccelerationTo1002);
-            CompareWhenLowIsGood(tvT_TurnTurretTime1, tvT_TurnTurretTime2);
-            CompareWhenLowIsGood(tvT_TurnHullTime1, tvT_TurnHullTime2);
-            CompareWhenHighIsGood(tvT_EnginePower1, tvT_EnginePower2);
-            CompareWhenLowIsGood(tvT_Weight1, tvT_Weight2);
+            var comparer = new Comparer();
+
+            comparer.CompareWhenLowIsGood(tvT_RepairCost1, tvT_RepairCost2);
+            comparer.CompareWhenHighIsGood(tvT_FirstYear1, tvT_FirstYear2);
+            comparer.CompareWhenLowIsGood(tvT_BattleRating1, tvT_BattleRating2);
+            comparer.CompareWhenHighIsGood(tvT_Penetration1, tvT_Penetration2);
+            comparer.CompareWhenHighIsGood(tvT_MuzzleVelocity1, tvT_MuzzleVelocity2);
+            comparer.CompareWhenLowIsGood(tvT_ReloadTime1, tvT_ReloadTime2);
+            comparer.CompareWhenHighIsGood(tvT_GunDepression1, tvT_GunDepression2);
+            comparer.CompareWhenHighIsGood(tvT_ReducedArmorFrontTurret1, tvT_ReducedArmorFrontTurret2);
+            comparer.CompareWhenHighIsGood(tvT_ReducedArmorTopSheet1, tvT_ReducedArmorTopSheet2);
+            comparer.CompareWhenHighIsGood(tvT_ReducedArmorBottomSheet1, tvT_ReducedArmorBottomSheet2);
+            comparer.CompareWhenHighIsGood(tvT_MaxSpeedAtRoad1, tvT_MaxSpeedAtRoad2);
+            comparer.CompareWhenHighIsGood(tvT_MaxSpeedAtTerrain1, tvT_MaxSpeedAtTerrain2);
+            comparer.CompareWhenHighIsGood(tvT_MaxReverseSpeed1, tvT_MaxReverseSpeed2);
+            comparer.CompareWhenLowIsGood(tvT_AccelerationTo1001, tvT_AccelerationTo1002);
+            comparer.CompareWhenLowIsGood(tvT_TurnTurretTime1, tvT_TurnTurretTime2);
+            comparer.CompareWhenLowIsGood(tvT_TurnHullTime1, tvT_TurnHullTime2);
+            comparer.CompareWhenHighIsGood(tvT_EnginePower1, tvT_EnginePower2);
+            comparer.CompareWhenLowIsGood(tvT_Weight1, tvT_Weight2);
         }
 
         /// <summary>
-        /// Change background to green when data is higher
+        /// Closing cache connection in OnStop method
         /// </summary>
-        /// <param name="textViewLeft">Left TextView</param>
-        /// <param name="textViewRight">Right TextView</param>
-        private void CompareWhenHighIsGood(TextView textViewLeft, TextView textViewRight)
+        protected override void OnStop()
         {
-            string textView1 = textViewLeft.Text;
-            string textView2 = textViewRight.Text;
-            double digitFromTv1;
-            double digitFromTv2;
-
-            double.TryParse(string.Join("", textView1.Where(d => char.IsDigit(d))), out digitFromTv1);
-            double.TryParse(string.Join("", textView2.Where(d => char.IsDigit(d))), out digitFromTv2);
-
-            if (digitFromTv1 == digitFromTv2)
-            {
-                textViewLeft.SetBackgroundColor(Android.Graphics.Color.Transparent);
-                textViewRight.SetBackgroundColor(Android.Graphics.Color.Transparent);
-            }
-            else
-            if (digitFromTv1 > digitFromTv2)
-            {
-                textViewLeft.SetBackgroundResource(Resource.Drawable._LeftBest);
-                textViewRight.SetBackgroundResource(Resource.Drawable._RightWorse);
-            }
-            else
-            {
-                textViewLeft.SetBackgroundResource(Resource.Drawable._LeftWorse);
-                textViewRight.SetBackgroundResource(Resource.Drawable._RightBest);
-            }
-        }
-
-        /// <summary>
-        /// Change background to green when data is lower
-        /// </summary>
-        /// <param name="textViewLeft">Left TextView</param>
-        /// <param name="textViewRight">Right TextView</param>
-        private void CompareWhenLowIsGood(TextView textViewLeft, TextView textViewRight)
-        {
-            string textView1 = textViewLeft.Text;
-            string textView2 = textViewRight.Text;
-            double digitFromTv1;
-            double digitFromTv2;
-
-            double.TryParse(string.Join("", textView1.Where(d => char.IsDigit(d))), out digitFromTv1);
-            double.TryParse(string.Join("", textView2.Where(d => char.IsDigit(d))), out digitFromTv2);
-
-            if (digitFromTv1 == digitFromTv2)
-            {
-                textViewLeft.SetBackgroundColor(Android.Graphics.Color.Transparent);
-                textViewRight.SetBackgroundColor(Android.Graphics.Color.Transparent);
-            }
-            else
-            if (digitFromTv1 < digitFromTv2)
-            {
-                textViewLeft.SetBackgroundResource(Resource.Drawable._LeftBest);
-                textViewRight.SetBackgroundResource(Resource.Drawable._RightWorse);
-            }
-            else
-            {
-                textViewLeft.SetBackgroundResource(Resource.Drawable._LeftWorse);
-                textViewRight.SetBackgroundResource(Resource.Drawable._RightBest);
-            }
+            base.OnStop();
+            BlobCache.Shutdown().Wait();
         }
 
         /// <summary>

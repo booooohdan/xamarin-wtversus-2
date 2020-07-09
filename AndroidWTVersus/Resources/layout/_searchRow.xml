@@ -1,29 +1,67 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<LinearLayout
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="#ffffd54f"
+    android:id="@+id/relativeViewRow"
+    android:padding="6dp">
+
     <ImageView
         android:src="@drawable/USA"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="54dp"
+        android:layout_height="37dp"
         android:id="@+id/imageViewRow"
         android:adjustViewBounds="true"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"/>
-
+        android:layout_marginRight="6dp"
+ />
     <TextView
-        android:text="Text"
+        android:text="Spitfire Mk. IX"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewRow"
+        android:id="@+id/nameViewRow"
         android:textColor="@android:color/black"
-        style="@android:style/TextAppearance.Medium"
         android:fontFamily="@font/symbols"
-        android:background="#ffffd54f"
-        android:layout_gravity="center" />
+        android:layout_toRightOf="@+id/imageViewRow"
+        android:textSize="17dp"
+        android:paddingBottom="7dp" 
+/>
+        <TextView
+        android:text="Fighter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rankViewRow"
+        android:textColor="@android:color/black"
+        android:textSize="12dp" 
+        android:fontFamily="@font/symbols"
+        android:layout_toRightOf="@+id/imageViewRow"
+        android:layout_below="@+id/nameViewRow"
+        />
+    <TextView
+        android:text="BR: 5.3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/brViewRow"
+        android:textColor="@android:color/black"
+        android:textSize="12dp" 
+        android:fontFamily="@font/symbols"
+        android:layout_toRightOf="@+id/imageViewRow"
+                android:layout_below="@+id/nameViewRow"
+                android:gravity="center"
 
-</LinearLayout>
+        />
+    <TextView
+        android:text="15000 s.l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/repairViewRow"
+        android:textColor="@android:color/black"
+        android:textSize="12dp" 
+        android:fontFamily="@font/symbols"
+        android:layout_toRightOf="@+id/imageViewRow"
+        android:layout_below="@+id/nameViewRow"
+        android:gravity="right"
+        />
+
+
+</RelativeLayout>

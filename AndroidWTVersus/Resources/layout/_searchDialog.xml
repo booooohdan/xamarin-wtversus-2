@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿ 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,7 +7,9 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffcdd2" />
+        android:queryBackground="@android:color/white"
+        android:background="#ffDC3546"
+        android:searchIcon="@drawable/searchIconWhite" />
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

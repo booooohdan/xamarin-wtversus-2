@@ -7,15 +7,16 @@ using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
-using AndroidWTVersus.DBEntities;
 using System.Reactive.Linq;
 using Akavache;
 using Plugin.Connectivity;
 using Android.Views;
 using Android.Content.PM;
+using System;
+using AndroidWTVersus.XmlHandler;
 
 namespace AndroidWTVersus
-{   
+{
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
     public class Startup:AppCompatActivity
     {
@@ -132,7 +133,7 @@ namespace AndroidWTVersus
             XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfPlanes));
             arrayOfPlanes = (ArrayOfPlanes)serializer.Deserialize(xReader);
 
-            await BlobCache.UserAccount.InsertObject("cachedArrayOfPlanes", arrayOfPlanes);
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfPlanes", arrayOfPlanes, TimeSpan.FromDays(7));
         }
 
         /// <summary>
@@ -150,7 +151,7 @@ namespace AndroidWTVersus
             XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfTanks));
             arrayOfTanks = (ArrayOfTanks)serializer.Deserialize(xReader);
 
-            await BlobCache.UserAccount.InsertObject("cachedArrayOfTanks", arrayOfTanks);
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfTanks", arrayOfTanks, TimeSpan.FromDays(7));
         }
 
         /// <summary>
@@ -168,7 +169,7 @@ namespace AndroidWTVersus
             XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfHelis));
             arrayOfHelis = (ArrayOfHelis)serializer.Deserialize(xReader);
 
-            await BlobCache.UserAccount.InsertObject("cachedArrayOfHelis", arrayOfHelis);
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfHelis", arrayOfHelis, TimeSpan.FromDays(7));
         }
 
         /// <summary>
@@ -186,7 +187,7 @@ namespace AndroidWTVersus
             XmlSerializer serializer = new XmlSerializer(typeof(ArrayOfShips));
             arrayOfShips = (ArrayOfShips)serializer.Deserialize(xReader);
 
-            await BlobCache.UserAccount.InsertObject("cachedArrayOfShips", arrayOfShips);
+            await BlobCache.UserAccount.InsertObject("cachedArrayOfShips", arrayOfShips, TimeSpan.FromDays(7));
         }
 
         /// <summary>
