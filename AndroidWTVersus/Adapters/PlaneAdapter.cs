@@ -14,18 +14,18 @@ using AndroidWTVersus.Models;
 
 namespace AndroidWTVersus.Adapters
 {
-    class TankAdapter : BaseAdapter<Tank>, IFilterable
+    class PlaneAdapter:BaseAdapter<Plane>, IFilterable
     {
-        private List<Tank> _originalData;
-        private List<Tank> _items;
+        private List<Plane> _originalData;
+        private List<Plane> _items;
         private readonly Activity _context;
-        
-        public TankAdapter(Activity activity, IEnumerable<Tank> tanks)
+
+        public PlaneAdapter(Activity activity, IEnumerable<Plane> planes)
         {
-            _items = tanks.OrderBy(x => x.VehicleId).ThenBy(x=>x.Nation).ToList();
+            _items = planes.OrderBy(x => x.VehicleId).ThenBy(x => x.Nation).ToList();
             _context = activity;
 
-            Filter = new TankFilter(this);
+            Filter = new PlaneFilter(this);
         }
 
         public override long GetItemId(int position)
@@ -37,7 +37,7 @@ namespace AndroidWTVersus.Adapters
         {
             var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout._searchRow, null);
 
-            var tanks = _items[position];
+            var planes = _items[position];
 
             var imageView = view.FindViewById<ImageView>(Resource.Id.imageViewRow);
             var relativeViewRow = view.FindViewById<RelativeLayout>(Resource.Id.relativeViewRow);
@@ -52,13 +52,13 @@ namespace AndroidWTVersus.Adapters
             var repair = _context.Resources.GetString(Resource.String.repair);
 
             nameView.Typeface = Typeface.CreateFromAsset(_context.Assets, "symbols.ttf");
-            nameView.Text = tanks.Name;
-            rankViewRow.Text = rank+tanks.Rank;
-            brViewRow.Text = br+ System.String.Format("{0:F1}", tanks.BR);
-            repairViewRow.Text = repair + tanks.RepairCost.ToString();
+            nameView.Text = planes.Name;
+            rankViewRow.Text = rank + planes.Rank;
+            brViewRow.Text = br + System.String.Format("{0:F1}", planes.BR);
+            repairViewRow.Text = repair + planes.RepairCost.ToString();
 
 
-            switch (tanks.Nation)
+            switch (planes.Nation)
             {
                 case "USA":
                     //imageView.SetImageResource(Resource.Drawable.USA);
@@ -98,7 +98,7 @@ namespace AndroidWTVersus.Adapters
                     break;
             }
 
-            switch (tanks.Type)
+            switch (planes.Type)
             {
                 case "Premium":
                     relativeViewRow.SetBackgroundColor(Color.LightGoldenrodYellow);
@@ -122,7 +122,7 @@ namespace AndroidWTVersus.Adapters
             get { return _items.Count; }
         }
 
-        public override Tank this[int position]
+        public override Plane this[int position]
         {
             get { return _items[position]; }
         }
@@ -136,10 +136,10 @@ namespace AndroidWTVersus.Adapters
             base.NotifyDataSetChanged();
         }
 
-        private class TankFilter : Filter
+        private class PlaneFilter : Filter
         {
-            private readonly TankAdapter _adapter;
-            public TankFilter(TankAdapter adapter)
+            private readonly PlaneAdapter _adapter;
+            public PlaneFilter(PlaneAdapter adapter)
             {
                 _adapter = adapter;
             }
@@ -147,7 +147,7 @@ namespace AndroidWTVersus.Adapters
             protected override FilterResults PerformFiltering(ICharSequence constraint)
             {
                 var returnObj = new FilterResults();
-                var results = new List<Tank>();
+                var results = new List<Plane>();
                 if (_adapter._originalData == null)
                     _adapter._originalData = _adapter._items;
 
@@ -175,7 +175,7 @@ namespace AndroidWTVersus.Adapters
             {
                 using (var values = results.Values)
                     _adapter._items = values.ToArray<Object>()
-                        .Select(r => r.ToNetObject<Tank>()).ToList();
+                        .Select(r => r.ToNetObject<Plane>()).ToList();
 
                 _adapter.NotifyDataSetChanged();
 

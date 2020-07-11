@@ -1,0 +1,828 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:p4="http://xamarin.com/mono/android/designer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMainBackground"
+    android:theme="@style/AppTheme">
+
+    <include
+        layout="@layout/_topMenuButtons"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewPlane"
+        android:layout_below="@+id/topMenuContainer"
+        android:layout_above="@+id/adViewComparerPlane"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+                <ImageView
+                    android:src="@drawable/f_4e"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivP_Plane1"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:src="@drawable/mig21_smt"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivP_Plane2"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="F-4E Phantom II"
+                    android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="37sp"
+                    android:id="@+id/searchablePlaneButton1"
+                    android:background="@android:color/transparent"/>
+                <Button
+                    android:text="MiG-21SMT"
+                    android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="37sp"
+                    android:id="@+id/searchablePlaneButton2"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="10.3"
+                    android:id="@+id/tvP_BattleRating1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battleRating" />
+                <TextView
+                    android:text="10.3"
+                    android:id="@+id/tvP_BattleRating2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1958"
+                    android:id="@+id/tvP_FirstYear1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeFirstYear" />
+                <TextView
+                    android:text="1971"
+                    android:id="@+id/tvP_FirstYear2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="14050"
+                    android:id="@+id/tvP_RepairCost1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repairCost" />
+                <TextView
+                    android:text="9633"
+                    android:id="@+id/tvP_RepairCost2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/RedLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weaponSpecification"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ASMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_ASMissile1"
+                        android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:src="@drawable/AAMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AAMissile1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AGMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AGMissile1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HBomb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_HBomb1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HCannon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_HCannon1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HTorpedo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                                                android:visibility="gone"
+                        android:id="@+id/ivP_HTorpedo1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/WrongMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                                                android:visibility="gone"
+                        android:id="@+id/ivP_WrongMusic1"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                                        <ImageView
+                        android:src="@drawable/ASMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_ASMissile2"
+                        android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:src="@drawable/AAMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AAMissile2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AGMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_AGMissile2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HBomb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_HBomb2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HCannon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_HCannon2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/HTorpedo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                                                android:visibility="gone"
+                        android:id="@+id/ivP_HTorpedo2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/WrongMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                                                android:visibility="gone"
+                        android:id="@+id/ivP_WrongMusic2"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+>
+                <TextView
+                    android:text="20 mm M61 cannon"
+                    android:id="@+id/tvP_Cannon1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="23 mm GSh-23L cannon"
+                    android:id="@+id/tvP_Cannon2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="13.17 kg/s"
+                    android:id="@+id/tvP_BurstMass1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeBurstMass" />
+                <TextView
+                    android:text="11.18 kg/s"
+                    android:id="@+id/tvP_BurstMass2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="4336 kg"
+                    android:id="@+id/tvP_BombsPayload1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeBombsPayload" />
+                <TextView
+                    android:text="1000 kg"
+                    android:id="@+id/tvP_BombsPayload2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+          <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/RWRAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_RWR1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Turrel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_Turrel1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Flares"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_Flares1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Parachute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_Parachute1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirBrake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AirBrake1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirToAirRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AirRadar1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Tailhook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_Tailhook1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirToTankRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_GroundRadar1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/CCIP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_CCIP1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/CCRP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_CCRP1"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AntiLoadingSuit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_GSuit1"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+
+                                <android.support.design.internal.FlowLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/RWRAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_RWR2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Turrel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_Turrel2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Flares"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_Flares2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Parachute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_Parachute2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirBrake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AirBrake2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirToAirRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AirRadar2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/Tailhook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_Tailhook2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AirToTankRadar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_GroundRadar2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/CCIP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_CCIP2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/CCRP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_CCRP2"
+                        android:adjustViewBounds="true" />
+                    <ImageView
+                        android:src="@drawable/AntiLoadingSuit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_GSuit2"
+                        android:adjustViewBounds="true" />
+                </android.support.design.internal.FlowLayout>
+            </LinearLayout>
+
+                        <TextView
+                style="@style/RedLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/flightSpecification"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1362 km/h"
+                    android:id="@+id/tvP_MaxSpeedAt0m1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeMaxSpeedAt0m" />
+                <TextView
+                    android:text="1380 km/h"
+                    android:id="@+id/tvP_MaxSpeedAt0m2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1785 km/h"
+                    android:id="@+id/tvP_MaxSpeedAt5000m1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeMaxSpeedAt5000m" />
+                <TextView
+                    android:text="1706 km/h"
+                    android:id="@+id/tvP_MaxSpeedAt5000m2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="40 s"
+                    android:id="@+id/tvP_Climb1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeClimb" />
+                <TextView
+                    android:text="29 s"
+                    android:id="@+id/tvP_Climb2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="match_parent"
+ />
+            </LinearLayout>         
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="26 s"
+                    android:id="@+id/tvP_TurnTime1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeTurnTime" />
+                <TextView
+                    android:text="36 s"
+                    android:id="@+id/tvP_TurnTime2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="16020"
+                    android:id="@+id/tvP_EnginePower1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enginePower" />
+                <TextView
+                    android:text="7300"
+                    android:id="@+id/tvP_EnginePower2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="24000 kg"
+                    android:id="@+id/tvP_TakeOffWeight1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeTakeOffWeight" />
+                <TextView
+                    android:text="9900 kg"
+                    android:id="@+id/tvP_TakeOffWeight2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="1450 km/h"
+                    android:id="@+id/tvP_Flutter1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeFlutter" />
+                <TextView
+                    android:text="1360 km/h"
+                    android:id="@+id/tvP_Flutter2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="5000 m"
+                    android:id="@+id/tvP_OptimalAltitude1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeOptimalAltitude" />
+                <TextView
+                    android:text="5000 m"
+                    android:id="@+id/tvP_OptimalAltitude2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="700 km/h"
+                    android:id="@+id/tvP_OptimalElevator1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeOptimalElevator" />
+                <TextView
+                    android:text="780 km/h"
+                    android:id="@+id/tvP_OptimalElevator2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="810 km/h"
+                    android:id="@+id/tvP_OptimalAilerons1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/planeOptimalAilerons" />
+                <TextView
+                    android:text="650 km/h"
+                    android:id="@+id/tvP_OptimalAilerons2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/adsComparePlane"
+        android:id="@+id/adViewComparerPlane"
+        android:layout_above="@+id/navigation"
+     />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation"/>
+
+</RelativeLayout>

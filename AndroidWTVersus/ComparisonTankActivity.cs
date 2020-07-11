@@ -2,26 +2,28 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Gms.Ads;
+using Android.Graphics;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using AndroidWTVersus.Adapters;
-using AndroidWTVersus.Comparison;
+using AndroidWTVersus.Helpers;
 using AndroidWTVersus.XmlHandler;
 using FFImageLoading;
 using FFImageLoading.Work;
 using System;
-using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using static Android.Views.View;
 using String = System.String;
 
 namespace AndroidWTVersus
 {
     [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
-    public class ComparisonTankActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
+    public class ComparisonTankActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener, IOnClickListener
     {
         #region initialization View values
 
@@ -30,6 +32,10 @@ namespace AndroidWTVersus
 
         Button searchableButton1;
         Button searchableButton2;
+        Button topMenuAircraftsButton;
+        Button topMenuTanksButton;
+        Button topMenuHeliButton;
+        Button topMenuShipsButton;
 
         TextView tvT_BattleRating1;
         TextView tvT_BattleRating2;
@@ -188,17 +194,46 @@ namespace AndroidWTVersus
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ComparisonTankLayout);
             context = Application.Context;
-            //Bottom menu initialization
-            BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            navigation.SetOnNavigationItemSelectedListener(this);
+            #endregion
+
+            #region Ads initializer
+            MobileAds.Initialize(context);
+            var adView = FindViewById<AdView>(Resource.Id.adViewComparerTank);
+            adView.LoadAd(new AdRequest.Builder().Build());
+            //var requestbuilder = new AdRequest.Builder().AddTestDevice("46CCAB8BBCE5B5FFA79C22BEB98029AC");
+            //adView.LoadAd(requestbuilder.Build());
             #endregion
 
             BindingInterfaceElementsToCode();
             FillListFromCacheAsync().ConfigureAwait(false);
+            TopMenuInitializer();
+            BottomMenuInitializer();
             LetsCompare();
 
             searchableButton1.Click += SearchableButton1_Click;
             searchableButton2.Click += SearchableButton2_Click;
+        }
+
+        /// <summary>
+        /// Initialize Custom Top Navigation Menu
+        /// </summary>
+        private void TopMenuInitializer()
+        {
+            topMenuTanksButton.SetBackgroundResource(Resource.Drawable.ButtonAsTabShape);
+            topMenuTanksButton.SetTextColor(Color.ParseColor("#dc3546"));
+            topMenuAircraftsButton.SetOnClickListener(this);
+            topMenuTanksButton.SetOnClickListener(this);
+            topMenuHeliButton.SetOnClickListener(this);
+            topMenuShipsButton.SetOnClickListener(this);
+        }
+
+        /// <summary>
+        /// Initialize Android Bottom Navigation Menu
+        /// </summary>
+        private void BottomMenuInitializer()
+        {
+            BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
+            navigation.SetOnNavigationItemSelectedListener(this);
         }
 
         /// <summary>
@@ -387,6 +422,7 @@ namespace AndroidWTVersus
         /// <param name="e"></param>
         private void SetTextToLeft(AdapterView.ItemClickEventArgs e)
         {
+            searchableButton1.Typeface = Typeface.CreateFromAsset(Assets, "symbols.ttf");
             searchableButton1.SetText(tankAdapter[e.Position].Name + "", TextNormal);
 
             br = String.Format("{0:F1}", tankAdapter[e.Position].BR);
@@ -420,6 +456,7 @@ namespace AndroidWTVersus
         /// <param name="e"></param>
         private void SetTextToRight(AdapterView.ItemClickEventArgs e)
         {
+            searchableButton2.Typeface = Typeface.CreateFromAsset(Assets, "symbols.ttf");
             searchableButton2.SetText(tankAdapter[e.Position].Name + "", TextNormal);
 
             br = String.Format("{0:F1}", tankAdapter[e.Position].BR);
@@ -452,7 +489,7 @@ namespace AndroidWTVersus
         /// </summary>
         private void LetsCompare()
         {
-            var comparer = new Comparer();
+            var comparer = new CompareHelper();
 
             comparer.CompareWhenLowIsGood(tvT_RepairCost1, tvT_RepairCost2);
             comparer.CompareWhenHighIsGood(tvT_FirstYear1, tvT_FirstYear2);
@@ -475,15 +512,6 @@ namespace AndroidWTVersus
         }
 
         /// <summary>
-        /// Closing cache connection in OnStop method
-        /// </summary>
-        protected override void OnStop()
-        {
-            base.OnStop();
-            BlobCache.Shutdown().Wait();
-        }
-
-        /// <summary>
         /// Menu navigation method
         /// </summary>
         /// <param name="item">Menu item</param>
@@ -495,11 +523,43 @@ namespace AndroidWTVersus
                 case Resource.Id.navigation_compare:
                     return true;
                 case Resource.Id.navigation_statistics:
+                    var intentStatistics = new Intent(this, typeof(StatisticsActivity));
+                    intentStatistics.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentStatistics);
                     return true;
                 case Resource.Id.navigation_feedback:
+                    var intentFeedback = new Intent(this, typeof(FeedbackActivity));
+                    intentFeedback.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentFeedback);
                     return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Top Tab Menu navigation method
+        /// </summary>
+        /// <param name="v">Menu item</param>
+        /// <returns></returns>
+        public void OnClick(View v)
+        {
+            switch (v.Id)
+            {
+                case Resource.Id.topMenuAircraftsButton:
+                    var intentAvia = new Intent(this, typeof(ComparisonPlaneActivity));
+                    intentAvia.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentAvia);
+                    break;
+                case Resource.Id.topMenuTanksButton:
+                    var intentTank = new Intent(this, typeof(ComparisonTankActivity));
+                    intentTank.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentTank);
+                    break;
+                case Resource.Id.topMenuHeliButton:
+                    break;
+                case Resource.Id.topMenuShipsButton:
+                    break;
+            }
         }
 
         /// <summary>
@@ -520,6 +580,11 @@ namespace AndroidWTVersus
             ivT_Tank2 = FindViewById<ImageView>(Resource.Id.ivT_Tank2);
             searchableButton1 = FindViewById<Button>(Resource.Id.searchableButton1);
             searchableButton2 = FindViewById<Button>(Resource.Id.searchableButton2);
+            topMenuAircraftsButton = FindViewById<Button>(Resource.Id.topMenuAircraftsButton);
+            topMenuTanksButton = FindViewById<Button>(Resource.Id.topMenuTanksButton);
+            topMenuHeliButton = FindViewById<Button>(Resource.Id.topMenuHeliButton);
+            topMenuShipsButton = FindViewById<Button>(Resource.Id.topMenuShipsButton);
+
 
             tvT_BattleRating1 = FindViewById<TextView>(Resource.Id.tvT_BattleRating1);
             tvT_BattleRating2 = FindViewById<TextView>(Resource.Id.tvT_BattleRating2);

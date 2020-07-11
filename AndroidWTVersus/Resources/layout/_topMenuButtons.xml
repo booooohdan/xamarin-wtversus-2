@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,6 +13,7 @@
         android:layout_width="0dp"
         android:layout_weight="25"
         android:text="@string/aircrafts"
+        android:background="@android:color/transparent"
         style="@style/TopMenuBottons"/>
     <Button
         android:id="@+id/topMenuTanksButton"
@@ -20,15 +21,15 @@
         android:layout_width="0dp"
         android:layout_weight="25"
         android:text="@string/tanks"
-        style="@style/TopMenuBottons"
-        android:textColor="@color/colorPrimary"
-        android:background="@drawable/ButtonAsTabShape" />
+        android:background="@android:color/transparent"
+        style="@style/TopMenuBottons" />
     <Button
         android:id="@+id/topMenuHeliButton"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:layout_weight="25"
         android:text="@string/helis"
+        android:background="@android:color/transparent"
         style="@style/TopMenuBottons" />
     <Button
         android:id="@+id/topMenuShipsButton"
@@ -36,5 +37,6 @@
         android:layout_width="0dp"
         android:layout_weight="25"
         android:text="@string/ships"
+        android:background="@android:color/transparent"
         style="@style/TopMenuBottons" />
 </LinearLayout>

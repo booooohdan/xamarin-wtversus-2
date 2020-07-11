@@ -16,7 +16,17 @@
   <string name="battleRating">BattleRating</string>
   <string name="tenDegree">-10 °</string>
   <string name="nineDegree">-9 °</string>
+  <string name="reportAnError">Report an error: </string>
+  <string name="emailMessage">Describe a problem, or your suggestion</string>
+  <string name="emailSend">Send report</string>
+  <string name="chooseEmailClient">Choose your email app</string>
+  <string name="followUs">Follow us:</string>
+  <string name="rateUs">Rate us in Google Play</string>
+  <string name="inDevelop">This section is under development</string>
 
+  <string name="rank">Rank:&#160;</string>
+  <string name="br">BR:&#160;</string>
+  <string name="repair">Repair:&#160;</string>
   <string name="mm">&#160;mm</string>
   <string name="s">&#160;s</string>
   <string name="m_s">&#160;m/s</string>
@@ -24,7 +34,24 @@
   <string name="km_h">&#160;km/h</string>
   <string name="h_p">&#160;h.p.</string>
   <string name="t">&#160;t</string>
+  <string name="kg_s">&#160;kg/s</string>
+  <string name="kg">&#160;kg</string>
+  <string name="meters">&#160;m</string>
 
+  <string name="planeFirstYear">First flight</string>
+  <string name="planeBurstMass">Burst mass</string>
+  <string name="planeBombsPayload">Bombs payload</string>
+  <string name="flightSpecification">FLIGHT SPECIFICATIONS</string>
+  <string name="planeMaxSpeedAt0m">Max speed at 0 m</string>
+  <string name="planeMaxSpeedAt5000m">Max speed at 5000 m</string>
+  <string name="planeClimb">Climb rate (0-5000 m)</string>
+  <string name="planeTurnTime">Turn time</string>
+  <string name="planeTakeOffWeight">Take-off weight</string>
+  <string name="planeFlutter">Speed of destruction</string>
+  <string name="planeOptimalAltitude">Optimal altitude</string>
+  <string name="planeOptimalElevator">Optimal velocities (Elevator)</string>
+  <string name="planeOptimalAilerons">Optimal velocities (Ailerons)</string>
+  
   <string name="tankFirstYear">First ride</string>
   <string name="repairCost">Repair cost</string>
   <string name="weaponSpecification">WEAPON SPECIFICATIONS</string>
