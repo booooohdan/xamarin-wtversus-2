@@ -81,6 +81,22 @@
   <string name="asmCount">ASM count</string>
   <string name="maxSpeed">Max speed at 0 m</string>
   <string name="climbTo1000">Climb rate (0-1000 m)</string>
-
+  
+  <string name="shipFirstYear">Launched</string>
+  <string name="mainCaliber">Main caliber</string>
+  <string name="mainCaliberReload">Main caliber reload time</string>
+  <string name="auCaliber">Auxiliary caliber</string>
+  <string name="aaaCaliber">Anti-aircraft caliber</string>
+  <string name="torpedoCount">Torpedo count</string>
+  <string name="torpedoMaxSpeed">Torpedo max speed</string>
+  <string name="torpedoExplosiveMass">Torpedo explosive mass</string>
+  <string name="floatingSpecification">FLOATING SPECIFICATIONS</string>
+  <string name="armorTower">Tower armor</string>
+  <string name="armorCitadel">Citadel armor</string>
+  <string name="shipMaxSpeed">Max speed</string>
+  <string name="shipAcceleration">Acceleration</string>
+  <string name="shipBrakingTime">Braking Time</string>
+  <string name="displacement">Displacement</string>
+  <string name="shipCrew">Crew</string>
 
 </resources>

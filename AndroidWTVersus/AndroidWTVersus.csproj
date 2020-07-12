@@ -80,10 +80,12 @@
     <Compile Include="Adapters\JavaHolder.cs" />
     <Compile Include="Adapters\ObjectExtensions.cs" />
     <Compile Include="Adapters\HeliAdapter.cs" />
+    <Compile Include="Adapters\ShipAdapter.cs" />
     <Compile Include="Adapters\PlaneAdapter.cs" />
     <Compile Include="Adapters\TankAdapter.cs" />
     <Compile Include="ComparisonHeliActivity.cs" />
     <Compile Include="ComparisonPlaneActivity.cs" />
+    <Compile Include="ComparisonShipActivity.cs" />
     <Compile Include="ComparisonTankActivity.cs" />
     <Compile Include="FeedbackActivity.cs" />
     <Compile Include="Helpers\CompareHelper.cs" />
@@ -500,6 +502,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\RWRHeli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ComparisonShipLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\germ_cruiser_admiral_graf_spee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\uk_cruiser_hawkins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DepthCharge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\GroundToShipRadar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Mine.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

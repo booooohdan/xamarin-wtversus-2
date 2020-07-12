@@ -453,6 +453,9 @@ namespace AndroidWTVersus
                     StartActivity(intentHeli);
                     break;
                 case Resource.Id.topMenuShipsButton:
+                    var intentShip = new Intent(this, typeof(ComparisonShipActivity));
+                    intentShip.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentShip);
                     break;
             }
         }
