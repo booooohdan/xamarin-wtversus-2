@@ -1,0 +1,92 @@
+<resources>
+<string name="app_name">WT Versus</string>
+  <string name="title_compare">比較</string>
+  <string name="title_statistics">統計</string>
+  <string name="title_feedback">フィードバック</string>
+  <string name="aircrafts">アビア</string>
+  <string name="tanks">軍</string>
+  <string name="helis">ヘリコプター</string>
+  <string name="ships">フリート</string>
+  <string name="alertDialogConnectTitle">インターネット接続なし</string>
+  <string name="alertDialogConnectMessage">続行するにはインターネットをオンにしてください</string>
+  <string name="alertDialogConnectRetry">再試行</string>
+  <string name="alertDialogLoadingTitle">車両データの読み込み</string>
+  <string name="alertDialogLoadingMessage">これには最大15秒かかる場合があります</string>
+  <string name="select">アイテムを選択</string>
+  <string name="battleRating">バトルレーティング</string>
+  <string name="tenDegree">-10°</string>
+  <string name="nineDegree">-9°</string>
+  <string name="reportAnError">エラーを報告：</string>
+  <string name="emailMessage">問題、またはあなたの提案を説明してください</string>
+  <string name="emailSend">レポートを送信</string>
+  <string name="chooseEmailClient">メールアプリを選択してください</string>
+  <string name="followUs">フォローしてください：</string>
+  <string name="rateUs">Google Playで評価してください</string>
+  <string name="inDevelop">このセクションは開発中です</string>
+
+  <string name="rank">ランク：&#160;</string>
+  <string name="br">BR：&#160;</string>
+  <string name="repair">修理：&#160;</string>
+
+  <string name="planeFirstYear">最初のフライト</string>
+  <string name="planeBurstMass">バースト質量</string>
+  <string name="planeBombsPayload">爆弾のペイロード</string>
+  <string name="flightSpecification">フライト仕様</string>
+  <string name="planeMaxSpeedAt0m">0 mでの最大速度</string>
+  <string name="planeMaxSpeedAt5000m">5000 mでの最大速度</string>
+  <string name="planeClimb">上昇率（0-5000 m）</string>
+  <string name="planeTurnTime">回転時間</string>
+  <string name="planeTakeOffWeight">離陸重量</string>
+  <string name="planeFlutter">破壊の速度</string>
+  <string name="planeOptimalAltitude">最適な高度</string>
+  <string name="planeOptimalElevator">最適速度（エレベーター）</string>
+  <string name="planeOptimalAilerons">最適速度（エルロン）</string>
+  
+  <string name="tankFirstYear">最初の乗車</string>
+  <string name="repairCost">修理費</string>
+  <string name="weaponSpecification">武器の仕様</string>
+  <string name="armorPenetration">装甲貫通</string>
+  <string name="muzzleVelocity">銃口速度</string>
+  <string name="reloadTime">リロード時間</string>
+  <string name="gunDepression">ガンうつ病</string>
+  <string name="armorSpecification">装甲仕様</string>
+  <string name="reducedArmorFrontTurret">砲塔の正面装甲パネル</string>
+  <string name="reducedArmorTopSheet">上部船体プレートの前面装甲</string>
+  <string name="reducedArmorBottomSheet">船体下部プレートの前面装甲</string>
+  <string name="ridingSpecifications">ライディング仕様</string>
+  <string name="maxSpeedAtRoad">高速道路の最高速度</string>
+  <string name="maxSpeedAtTerrain">クロスカントリーでの最高速度</string>
+  <string name="maxReverseSpeed">後退速度</string>
+  <string name="accelerationTo100">100メートルの加速度</string>
+  <string name="turnTurretTime">タレットのターンアラウンド</string>
+  <string name="turnHullTime">ハルターンアラウンド</string>
+  <string name="enginePower">エンジン出力</string>
+  <string name="weight">重量</string>
+  
+  <string name="agmCount">AGMカウント</string>
+  <string name="agmPenetration">AGM浸透</string>
+  <string name="agmSpeed">AGM速度</string>
+  <string name="agmRange">AGM射程</string>
+  <string name="aamCount">AAMカウント</string>
+  <string name="asmCount">ASMカウント</string>
+  <string name="maxSpeed">0 mでの最大速度</string>
+  <string name="climbTo1000">上昇率（0-1000 m）</string>
+  
+  <string name="shipFirstYear">発売</string>
+  <string name="mainCaliber">メインキャリバー</string>
+  <string name="mainCaliberReload">主口径再装填時間</string>
+  <string name="auCaliber">補助口径</string>
+  <string name="aaaCaliber">対空口径</string>
+  <string name="torpedoCount">魚雷の数</string>
+  <string name="torpedoMaxSpeed">魚雷の最高速度</string>
+  <string name="torpedoExplosiveMass">魚雷爆弾</string>
+  <string name="floatingSpecification">フローティング仕様</string>
+  <string name="armorTower">タワーアーマー</string>
+  <string name="armorCitadel">城塞の鎧</string>
+  <string name="shipMaxSpeed">最高速度</string>
+  <string name="shipAcceleration">加速</string>
+  <string name="shipBrakingTime">ブレーキ時間</string>
+  <string name="displacement">変位</string>
+  <string name="shipCrew">クルー</string>
+
+</resources>

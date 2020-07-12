@@ -1,0 +1,92 @@
+<resources>
+<string name="app_name">WT Versus</string>
+  <string name="title_compare">Confronto</string>
+  <string name="title_statistics">Statistiche</string>
+  <string name="title_feedback">Commenti</string>
+  <string name="aircrafts">Avia</string>
+  <string name="tanks">Army</string>
+  <string name="helis">Heli</string>
+  <string name="ships">Fleet</string>
+  <string name="alertDialogConnectTitle">Nessuna connessione Internet</string>
+  <string name="alertDialogConnectMessage">Attiva Internet per continuare</string>
+  <string name="alertDialogConnectRetry">Riprova</string>
+  <string name="alertDialogLoadingTitle">Caricamento dei dati del veicolo</string>
+  <string name="alertDialogLoadingMessage">Potrebbero essere necessari fino a 15 secondi</string>
+  <string name="select">Seleziona elemento</string>
+  <string name="battleRating">Indice di battaglia</string>
+  <string name="tenDegree">-10°</string>
+  <string name="nineDegree">-9°</string>
+  <string name="reportAnError">Segnala un errore:</string>
+  <string name="emailMessage">Descrivi un problema o il tuo suggerimento</string>
+  <string name="emailSend">Invia rapporto</string>
+  <string name="chooseEmailClient">Scegli la tua app di posta elettronica</string>
+  <string name="followUs">Seguici:</string>
+  <string name="rateUs">Valutaci su Google Play</string>
+  <string name="inDevelop">Questa sezione è in fase di sviluppo</string>
+
+  <string name="rank">Classifica:&#160;</string>
+  <string name="br">BR:&#160;</string>
+  <string name="repair">Riparazione:&#160;</string>
+
+  <string name="planeFirstYear">Primo volo</string>
+  <string name="planeBurstMass">Massa di scoppio</string>
+  <string name="planeBombsPayload">Carico utile delle bombe</string>
+  <string name="flightSpecification">SPECIFICHE DI VOLO</string>
+  <string name="planeMaxSpeedAt0m">Velocità massima a 0 m</string>
+  <string name="planeMaxSpeedAt5000m">Velocità massima a 5000 m</string>
+  <string name="planeClimb">Velocità di salita (0-5000 m)</string>
+  <string name="planeTurnTime">Tempo di giro</string>
+  <string name="planeTakeOffWeight">Peso al decollo</string>
+  <string name="planeFlutter">Velocità di distruzione</string>
+  <string name="planeOptimalAltitude">Altitudine ottimale</string>
+  <string name="planeOptimalElevator">Velocità ottimali (elevatore)</string>
+  <string name="planeOptimalAilerons">Velocità ottimali (alettoni)</string>
+  
+  <string name="tankFirstYear">Primo giro</string>
+  <string name="repairCost">Costi di riparazione</string>
+  <string name="weaponSpecification">SPECIFICHE DELL&amp;#x27;ARMA</string>
+  <string name="armorPenetration">Penetrazione dell&amp;#x27;armatura</string>
+  <string name="muzzleVelocity">Velocità del muso</string>
+  <string name="reloadTime">Tempo di ricarica</string>
+  <string name="gunDepression">Depressione da arma da fuoco</string>
+  <string name="armorSpecification">SPECIFICHE DELL&amp;#x27;armatura</string>
+  <string name="reducedArmorFrontTurret">Pannello dell&amp;#x27;armatura frontale della torretta</string>
+  <string name="reducedArmorTopSheet">Armatura frontale della piastra superiore dello scafo</string>
+  <string name="reducedArmorBottomSheet">Armatura frontale della piastra inferiore dello scafo</string>
+  <string name="ridingSpecifications">Specifiche di guida</string>
+  <string name="maxSpeedAtRoad">Velocità massima in autostrada</string>
+  <string name="maxSpeedAtTerrain">Velocità massima in sci di fondo</string>
+  <string name="maxReverseSpeed">Velocità inversa</string>
+  <string name="accelerationTo100">100 metri di accelerazione</string>
+  <string name="turnTurretTime">Turnaround della torretta</string>
+  <string name="turnHullTime">inversione di tendenza dello scafo</string>
+  <string name="enginePower">Potenza del motore</string>
+  <string name="weight">Peso</string>
+  
+  <string name="agmCount">conteggio AGM</string>
+  <string name="agmPenetration">Penetrazione AGM</string>
+  <string name="agmSpeed">Velocità AGM</string>
+  <string name="agmRange">Poligono di tiro AGM</string>
+  <string name="aamCount">Conteggio AAM</string>
+  <string name="asmCount">Conteggio ASM</string>
+  <string name="maxSpeed">Velocità massima a 0 m</string>
+  <string name="climbTo1000">Velocità di salita (0-1000 m)</string>
+  
+  <string name="shipFirstYear">Lanciato</string>
+  <string name="mainCaliber">Calibro principale</string>
+  <string name="mainCaliberReload">Tempo di ricarica del calibro principale</string>
+  <string name="auCaliber">Calibro ausiliario</string>
+  <string name="aaaCaliber">Calibro antiaereo</string>
+  <string name="torpedoCount">Conteggio dei siluri</string>
+  <string name="torpedoMaxSpeed">Velocità massima siluro</string>
+  <string name="torpedoExplosiveMass">Massa esplosiva siluro</string>
+  <string name="floatingSpecification">SPECIFICHE GALLEGGIANTI</string>
+  <string name="armorTower">Armatura della torre</string>
+  <string name="armorCitadel">Armatura della Cittadella</string>
+  <string name="shipMaxSpeed">Velocità massima</string>
+  <string name="shipAcceleration">Accelerazione</string>
+  <string name="shipBrakingTime">Tempo di frenata</string>
+  <string name="displacement">Cilindrata</string>
+  <string name="shipCrew">Crew</string>
+
+</resources>

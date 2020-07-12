@@ -13,7 +13,7 @@
   <string name="alertDialogLoadingTitle">Loading vehicle data</string>
   <string name="alertDialogLoadingMessage">This may take up to a 15 sec</string>
   <string name="select">Select item</string>
-  <string name="battleRating">BattleRating</string>
+  <string name="battleRating">Battle Rating</string>
   <string name="tenDegree">-10 °</string>
   <string name="nineDegree">-9 °</string>
   <string name="reportAnError">Report an error: </string>

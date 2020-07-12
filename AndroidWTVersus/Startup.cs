@@ -17,7 +17,7 @@ using AndroidWTVersus.XmlHandler;
 
 namespace AndroidWTVersus
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
+    [Activity(Label = "WT Versus 2", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
     public class Startup:AppCompatActivity
     {
         #region Variables

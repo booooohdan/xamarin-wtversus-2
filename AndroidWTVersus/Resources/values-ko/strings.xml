@@ -1,0 +1,93 @@
+<resources>
+
+<string name="app_name">WT Versus</string>
+  <string name="title_compare">비교</string>
+  <string name="title_statistics">통계</string>
+  <string name="title_feedback">피드백</string>
+  <string name="aircrafts">아 비아</string>
+  <string name="tanks">육군</string>
+  <string name="helis">헬리</string>
+  <string name="ships">함대</string>
+  <string name="alertDialogConnectTitle">인터넷에 연결되어 있지 않습니다</string>
+  <string name="alertDialogConnectMessage">계속하려면 인터넷을 켜십시오</string>
+  <string name="alertDialogConnectRetry">다시 시도</string>
+  <string name="alertDialogLoadingTitle">차량 데이터로드</string>
+  <string name="alertDialogLoadingMessage">최대 15 초가 걸릴 수 있습니다</string>
+  <string name="select">항목 선택</string>
+  <string name="battleRating">전투 등급</string>
+  <string name="tenDegree">-10°</string>
+  <string name="nineDegree">-9°</string>
+  <string name="reportAnError">오류보고 :</string>
+  <string name="emailMessage">문제 또는 당신의 제안을 묘사하십시오</string>
+  <string name="emailSend">보내기 보고서</string>
+  <string name="chooseEmailClient">이메일 앱을 선택하십시오</string>
+  <string name="followUs">우리를 따르십시오 :</string>
+  <string name="rateUs">Google Play에서 우리를 평가</string>
+  <string name="inDevelop">이 부분은 개발 중입니다</string>
+
+  <string name="rank">순위 :&#160;</string>
+  <string name="br">BR :&#160;</string>
+  <string name="repair">수리 :&#160;</string>
+
+  <string name="planeFirstYear">첫 비행</string>
+  <string name="planeBurstMass">버스트 질량</string>
+  <string name="planeBombsPayload">Bombs 페이로드</string>
+  <string name="flightSpecification">비행 사양</string>
+  <string name="planeMaxSpeedAt0m">0m에서 최대 속도</string>
+  <string name="planeMaxSpeedAt5000m">5000m에서 최대 속도</string>
+  <string name="planeClimb">증가율 (0-5000 m)</string>
+  <string name="planeTurnTime">턴 타임</string>
+  <string name="planeTakeOffWeight">이륙 중량</string>
+  <string name="planeFlutter">파괴 속도</string>
+  <string name="planeOptimalAltitude">최적 고도</string>
+  <string name="planeOptimalElevator">최적 속도 (엘리베이터)</string>
+  <string name="planeOptimalAilerons">최적 속도 (에일러론)</string>
+  
+  <string name="tankFirstYear">첫번째 타기</string>
+  <string name="repairCost">수리 비용</string>
+  <string name="weaponSpecification">무기 사양</string>
+  <string name="armorPenetration">방어구</string>
+  <string name="muzzleVelocity">총구 속도</string>
+  <string name="reloadTime">재 장전 시간</string>
+  <string name="gunDepression">총 우울증</string>
+  <string name="armorSpecification">아머 사양</string>
+  <string name="reducedArmorFrontTurret">포탑의 전면 장갑 패널</string>
+  <string name="reducedArmorTopSheet">상부 선체 판의 전면 갑옷</string>
+  <string name="reducedArmorBottomSheet">선체 하부 판금 방어구</string>
+  <string name="ridingSpecifications">승차 사양</string>
+  <string name="maxSpeedAtRoad">고속도로 최대 속도</string>
+  <string name="maxSpeedAtTerrain">국가 간 최고 속도</string>
+  <string name="maxReverseSpeed">역 속도</string>
+  <string name="accelerationTo100">100 미터 가속</string>
+  <string name="turnTurretTime">터렛 처리 시간</string>
+  <string name="turnHullTime">선체 처리</string>
+  <string name="enginePower">엔진 출력</string>
+  <string name="weight">무게</string>
+  
+  <string name="agmCount">AGM 수</string>
+  <string name="agmPenetration">AGM 침투</string>
+  <string name="agmSpeed">AGM 속도</string>
+  <string name="agmRange">AGM 발사 범위</string>
+  <string name="aamCount">AAM 수</string>
+  <string name="asmCount">ASM 수</string>
+  <string name="maxSpeed">0m에서 최대 속도</string>
+  <string name="climbTo1000">상승률 (0-1000 m)</string>
+  
+  <string name="shipFirstYear">시작</string>
+  <string name="mainCaliber">주 구경</string>
+  <string name="mainCaliberReload">주요 구경 재 장전 시간</string>
+  <string name="auCaliber">보조 구경</string>
+  <string name="aaaCaliber">항공기 구경</string>
+  <string name="torpedoCount">어뢰 수</string>
+  <string name="torpedoMaxSpeed">어뢰 최대 속도</string>
+  <string name="torpedoExplosiveMass">어뢰 폭발성 덩어리</string>
+  <string name="floatingSpecification">플로팅 사양</string>
+  <string name="armorTower">타워 아머</string>
+  <string name="armorCitadel">성채</string>
+  <string name="shipMaxSpeed">최대 속도</string>
+  <string name="shipAcceleration">가속</string>
+  <string name="shipBrakingTime">제동 시간</string>
+  <string name="displacement">변위</string>
+  <string name="shipCrew">승무원</string>
+
+</resources>
