@@ -72,5 +72,15 @@
   <string name="turnHullTime">Hull turnaround</string>
   <string name="enginePower">Engine power</string>
   <string name="weight">Weight</string>
+  
+  <string name="agmCount">AGM count</string>
+  <string name="agmPenetration">AGM penetration</string>
+  <string name="agmSpeed">AGM speed</string>
+  <string name="agmRange">AGM firing range</string>
+  <string name="aamCount">AAM count</string>
+  <string name="asmCount">ASM count</string>
+  <string name="maxSpeed">Max speed at 0 m</string>
+  <string name="climbTo1000">Climb rate (0-1000 m)</string>
+
 
 </resources>

@@ -124,13 +124,8 @@ namespace AndroidWTVersus
         View view;
         TextView.BufferType TextNormal;
 
-        string mm;
         string s;
-        string m_s;
-        string degree;
         string km_h;
-        string h_p;
-        string t;
         string br;
         string kg_s;
         string kg;
@@ -446,9 +441,6 @@ namespace AndroidWTVersus
             switch (v.Id)
             {
                 case Resource.Id.topMenuAircraftsButton:
-                    var intentAvia = new Intent(this, typeof(ComparisonPlaneActivity));
-                    intentAvia.AddFlags(ActivityFlags.NoAnimation);
-                    StartActivity(intentAvia);
                     break;
                 case Resource.Id.topMenuTanksButton:
                     var intentTank = new Intent(this, typeof(ComparisonTankActivity));
@@ -456,6 +448,9 @@ namespace AndroidWTVersus
                     StartActivity(intentTank);
                     break;
                 case Resource.Id.topMenuHeliButton:
+                    var intentHeli = new Intent(this, typeof(ComparisonHeliActivity));
+                    intentHeli.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentHeli);
                     break;
                 case Resource.Id.topMenuShipsButton:
                     break;
@@ -468,13 +463,8 @@ namespace AndroidWTVersus
         private void BindingInterfaceElementsToCode()
         {
             TextNormal = TextView.BufferType.Normal;
-            mm = context.Resources.GetString(Resource.String.mm);
             s = context.Resources.GetString(Resource.String.s);
-            m_s = context.Resources.GetString(Resource.String.m_s);
-            degree = context.Resources.GetString(Resource.String.degree);
             km_h = context.Resources.GetString(Resource.String.km_h);
-            h_p = context.Resources.GetString(Resource.String.h_p);
-            t = context.Resources.GetString(Resource.String.t);
             kg_s = context.Resources.GetString(Resource.String.kg_s);
             kg = context.Resources.GetString(Resource.String.kg);
             meters = context.Resources.GetString(Resource.String.meters);

@@ -551,11 +551,11 @@ namespace AndroidWTVersus
                     StartActivity(intentAvia);
                     break;
                 case Resource.Id.topMenuTanksButton:
-                    var intentTank = new Intent(this, typeof(ComparisonTankActivity));
-                    intentTank.AddFlags(ActivityFlags.NoAnimation);
-                    StartActivity(intentTank);
                     break;
                 case Resource.Id.topMenuHeliButton:
+                    var intentHeli = new Intent(this, typeof(ComparisonHeliActivity));
+                    intentHeli.AddFlags(ActivityFlags.NoAnimation);
+                    StartActivity(intentHeli);
                     break;
                 case Resource.Id.topMenuShipsButton:
                     break;
