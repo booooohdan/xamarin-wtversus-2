@@ -24,19 +24,19 @@
   <string name="rateUs">Оцените нас в Google Play</string>
   <string name="inDevelop">Этот раздел находится в разработке</string>
 
-  <string name="rank">Ранг: </string>
-  <string name="br">БР: </string>
-  <string name="repair">Ремонт: </string>
-  <string name="mm">мм</string>
-  <string name="s">с</string>
-  <string name="m_s">м/с</string>
-  <string name="degree">°</string>
-  <string name="km_h">км/ч</string>
-  <string name="h_p">л.с.</string>
-  <string name="t">т</string>
-  <string name="kg_s">кг/с</string>
-  <string name="kg">кг</string>
-  <string name="meters">м</string>
+  <string name="rank">Ранг:&#160;</string>
+  <string name="br">БР:&#160;</string>
+  <string name="repair">Ремонт:&#160;</string>
+  <string name="mm">&#160;мм</string>
+  <string name="s">&#160;с</string>
+  <string name="m_s">&#160;м/с</string>
+  <string name="degree">&#160;°</string>
+  <string name="km_h">&#160;км/ч</string>
+  <string name="h_p">&#160;л.с.</string>
+  <string name="t">&#160;т</string>
+  <string name="kg_s">&#160;кг/с</string>
+  <string name="kg">&#160;кг</string>
+  <string name="meters">&#160;м</string>
 
   <string name="planeFirstYear">Первый полёт</string>
   <string name="planeBurstMass">Вес сек. залпа</string>
