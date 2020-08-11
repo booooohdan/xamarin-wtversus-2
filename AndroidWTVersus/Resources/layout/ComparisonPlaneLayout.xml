@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:p4="http://xamarin.com/mono/android/designer"
@@ -53,6 +54,7 @@
                 android:layout_height="wrap_content">
                 <Button
                     android:text="F-4E Phantom II"
+                    android:typeface="sans"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
@@ -61,12 +63,13 @@
                     android:background="@android:color/transparent"/>
                 <Button
                     android:text="MiG-21SMT"
+                    android:typeface="sans"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="37sp"
                     android:id="@+id/searchablePlaneButton2"
-                    android:background="@android:color/transparent" />
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
@@ -130,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="14050"
+                    android:text="13838"
                     android:id="@+id/tvP_RepairCost1"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -143,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/repairCost" />
                 <TextView
-                    android:text="9633"
+                    android:text="11105"
                     android:id="@+id/tvP_RepairCost2"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -201,14 +204,14 @@
                         android:src="@drawable/HTorpedo"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                                                android:visibility="gone"
+                        android:visibility="gone"
                         android:id="@+id/ivP_HTorpedo1"
                         android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/WrongMusic"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                                                android:visibility="gone"
+                        android:visibility="gone"
                         android:id="@+id/ivP_WrongMusic1"
                         android:adjustViewBounds="true" />
                 </android.support.design.internal.FlowLayout>
@@ -217,7 +220,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="wrap_content">
-                                        <ImageView
+                    <ImageView
                         android:src="@drawable/ASMissile"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
@@ -253,14 +256,14 @@
                         android:src="@drawable/HTorpedo"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                                                android:visibility="gone"
+                        android:visibility="gone"
                         android:id="@+id/ivP_HTorpedo2"
                         android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/WrongMusic"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                                                android:visibility="gone"
+                        android:visibility="gone"
                         android:id="@+id/ivP_WrongMusic2"
                         android:adjustViewBounds="true" />
                 </android.support.design.internal.FlowLayout>
@@ -346,7 +349,7 @@
  />
             </LinearLayout>
 
-          <LinearLayout
+            <LinearLayout
                 android:background="#ffffffff"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -425,7 +428,7 @@
                         android:adjustViewBounds="true" />
                 </android.support.design.internal.FlowLayout>
 
-                                <android.support.design.internal.FlowLayout
+                <android.support.design.internal.FlowLayout
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="wrap_content">
@@ -503,7 +506,7 @@
                 </android.support.design.internal.FlowLayout>
             </LinearLayout>
 
-                        <TextView
+            <TextView
                 style="@style/RedLabelTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -595,7 +598,7 @@
                     android:layout_weight="25"
                     android:layout_height="match_parent"
  />
-            </LinearLayout>         
+            </LinearLayout>
 
             <LinearLayout
                 android:background="#ffffffff"
@@ -683,6 +686,36 @@
                     android:layout_height="wrap_content"
  />
             </LinearLayout>
+
+                        <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="0.67"
+                    android:id="@+id/tvP_PowerToWeight1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plane_PowerToWeight" />
+                <TextView
+                    android:text="0.74"
+                    android:id="@+id/tvP_PowerToWeight2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
 
             <LinearLayout
                 android:background="#ffffffff"
@@ -805,7 +838,6 @@
     </ScrollView>
 
     <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:adSize="SMART_BANNER"

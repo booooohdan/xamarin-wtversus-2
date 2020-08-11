@@ -1,5 +1,6 @@
-﻿ 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -10,6 +11,21 @@
         android:queryBackground="@android:color/white"
         android:background="#ffDC3546"
         android:searchIcon="@drawable/searchIconWhite" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerNation" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerRank" />
+    </LinearLayout>
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

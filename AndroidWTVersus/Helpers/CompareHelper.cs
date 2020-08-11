@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Android.App;
 using Android.Content;
 using Android.Widget;
@@ -48,11 +49,15 @@ namespace AndroidWTVersus.Helpers
         /// <param name="textViewRight">Right TextView</param>
         public void CompareWhenLowIsGood(TextView textViewLeft, TextView textViewRight)
         {
-            double digitFromTv1;
-            double digitFromTv2;
 
-            double.TryParse(string.Join("", textViewLeft.Text.Where(d => char.IsDigit(d))), out digitFromTv1);
-            double.TryParse(string.Join("", textViewRight.Text.Where(d => char.IsDigit(d))), out digitFromTv2);
+            string stringLeft = Regex.Split(textViewLeft.Text, @"[^0-9\.]+")
+            .Where(c => c != "." && c.Trim() != "").FirstOrDefault();
+            string stringRight = Regex.Split(textViewRight.Text, @"[^0-9\.]+")
+            .Where(c => c != "." && c.Trim() != "").FirstOrDefault();
+
+            double digitFromTv1 = Convert.ToDouble(stringLeft);
+            double digitFromTv2 = Convert.ToDouble(stringRight);
+
 
             if (digitFromTv1 == digitFromTv2)
             {

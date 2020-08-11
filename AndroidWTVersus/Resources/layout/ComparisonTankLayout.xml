@@ -52,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
-                    android:text="M1A1 Abrams"
+                    android:text="M1A2 Abrams"
+                    android:typeface="sans"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
@@ -61,6 +62,7 @@
                     android:background="@android:color/transparent"/>
                 <Button
                     android:text="Leopard 2A5"
+                    android:typeface="sans"
                     android:drawableRight="@drawable/abc_spinner_mtrl_am_alpha"
                     android:layout_width="0dp"
                     android:layout_weight="50"
@@ -130,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="12935"
+                    android:text="14684"
                     android:id="@+id/tvT_RepairCost1"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -143,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/repairCost" />
                 <TextView
-                    android:text="17330"
+                    android:text="16427"
                     android:id="@+id/tvT_RepairCost2"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -1175,6 +1177,35 @@
                 <TextView
                     android:text="59.5 t"
                     android:id="@+id/tvT_Weight2"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+            </LinearLayout>
+
+                                    <LinearLayout
+                android:background="#ffffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="24.62"
+                    android:id="@+id/tvT_PowerToWeight1"
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+ />
+                <TextView
+                    style="@style/BlackTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plane_PowerToWeight" />
+                <TextView
+                    android:text="25.21"
+                    android:id="@+id/tvT_PowerToWeight2"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
                     android:layout_weight="25"

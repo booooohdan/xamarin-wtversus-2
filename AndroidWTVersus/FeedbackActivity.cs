@@ -21,6 +21,7 @@ namespace AndroidWTVersus
         Context context;
         EditText editMessage;
         Button buttonSend, buttonReddit, buttonVK;
+        ImageButton buttonRefWT, buttonRefWoT;
         RatingBar ratingBar;
 
         /// <summary>
@@ -49,6 +50,8 @@ namespace AndroidWTVersus
             buttonReddit.Click += ButtonReddit_Click;
             buttonVK.Click += ButtonVK_Click;
             ratingBar.RatingBarChange += RatingBar_RatingBarChange;
+            buttonRefWT.Click += ButtonRefWT_Click;
+            buttonRefWoT.Click += ButtonRefWoT_Click;
         }
 
         private void ButtonSend_Click(object sender, EventArgs e)
@@ -69,14 +72,26 @@ namespace AndroidWTVersus
 
         private void ButtonReddit_Click(object sender, EventArgs e)
         {
-           StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
-                .Parse("https://www.reddit.com/r/wtversus/")));
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+                 .Parse("https://www.reddit.com/r/wtversus/")));
         }
 
         private void RatingBar_RatingBarChange(object sender, RatingBar.RatingBarChangeEventArgs e)
         {
             StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
                 .Parse("https://play.google.com/store/apps/details?id=com.wave.wtversus")));
+        }
+
+        private void ButtonRefWT_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+              .Parse("https://play.google.com/store/apps/details?id=com.wave.wtquiz")));
+        }
+
+        private void ButtonRefWoT_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
+              .Parse("https://play.google.com/store/apps/details?id=com.wave.wotquiz")));
         }
 
         /// <summary>
@@ -89,6 +104,8 @@ namespace AndroidWTVersus
             buttonReddit = FindViewById<Button>(Resource.Id.buttonReddit);
             buttonVK = FindViewById<Button>(Resource.Id.buttonVK);
             ratingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
+            buttonRefWT = FindViewById<ImageButton>(Resource.Id.buttonRefWT);
+            buttonRefWoT = FindViewById<ImageButton>(Resource.Id.buttonRefWoT);
         }
 
         /// <summary>
