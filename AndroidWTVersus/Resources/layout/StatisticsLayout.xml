@@ -25,26 +25,56 @@
             style="@style/TopMenuBottons"/>
     </LinearLayout>
 
+     <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/adViewStatistics">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="5dp"
-        android:layout_below="@+id/toolbar"
-        android:layout_above="@+id/adViewStatistics">
-
+        android:padding="15dp">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/Error404"/>
+            android:adjustViewBounds="true"
+            android:src="@drawable/statspromote"/>
             <TextView
-            android:text="@string/inDevelop"
+            android:text="@string/stats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/black" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                        android:id="@+id/statbutton"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:text="@string/downloadGP"/>
+
+                    <ImageView
+                android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/chartspromote"/>
+            <TextView
+            android:text="@string/charts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chartbutton"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:text="@string/downloadGP"/>
      </LinearLayout>
+    </ScrollView>
 
     <com.google.android.gms.ads.AdView
         android:layout_width="wrap_content"

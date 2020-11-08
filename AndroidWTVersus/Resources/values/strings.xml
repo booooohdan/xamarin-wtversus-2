@@ -22,10 +22,12 @@
   <string name="auCaliber">Auxiliary caliber</string>
   <string name="battleRating">Battle Rating</string>
   <string name="br">BR: </string>
+  <string name="charts">Remember the TOP section in Versus? He is now in another app. Download it!</string>
   <string name="chooseEmailClient">Choose your email app</string>
   <string name="climbTo1000">Climb rate (0-1000 m)</string>
   <string name="degree"> °</string>
   <string name="displacement">Displacement</string>
+  <string name="downloadGP">Download from Google Play</string>
   <string name="emailMessage">Describe a problem, or your suggestion</string>
   <string name="emailSend">Send report</string>
   <string name="enginePower">Engine power</string>
@@ -81,6 +83,7 @@
   <string name="shipFirstYear">Launched</string>
   <string name="shipMaxSpeed">Max speed</string>
   <string name="ships">Fleet</string>
+  <string name="stats">STATISTICS WORK. It has been moved to another program. Download now!</string>
   <string name="t"> t</string>
   <string name="tankFirstYear">First ride</string>
   <string name="tanks">Army</string>

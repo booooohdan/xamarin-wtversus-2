@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -55,8 +56,8 @@ namespace AndroidWTVersus.Helpers
             string stringRight = Regex.Split(textViewRight.Text, @"[^0-9\.]+")
             .Where(c => c != "." && c.Trim() != "").FirstOrDefault();
 
-            double digitFromTv1 = Convert.ToDouble(stringLeft);
-            double digitFromTv2 = Convert.ToDouble(stringRight);
+            double digitFromTv1 = Convert.ToDouble(stringLeft, CultureInfo.InvariantCulture);
+            double digitFromTv2 = Convert.ToDouble(stringRight, CultureInfo.InvariantCulture);
 
 
             if (digitFromTv1 == digitFromTv2)

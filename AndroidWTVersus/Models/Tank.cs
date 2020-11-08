@@ -75,6 +75,7 @@ namespace AndroidWTVersus.Models
         public bool IRSpotlight { get; set; }
         public bool AirSearchRadar { get; set; }
         public bool AirLockRadar { get; set; }
+        public bool RWR { get; set; }
         public bool TankSearchRadar { get; set; }
         public bool GrenadeSmoke { get; set; }
         public bool ExhaustSmoke { get; set; }

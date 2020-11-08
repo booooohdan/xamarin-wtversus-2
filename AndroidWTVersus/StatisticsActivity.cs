@@ -8,10 +8,19 @@ using Android.OS;
 using Android.Support.Design.Internal;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
+using Android.Util;
 using Android.Views;
 using Android.Webkit;
 using Android.Widget;
+using CloudflareSolverRe;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace AndroidWTVersus
 {
@@ -19,6 +28,8 @@ namespace AndroidWTVersus
     public class StatisticsActivity:AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         Context context;
+        Button statbutton;
+        Button chartbutton;
 
         /// <summary>
         /// Base Android OnCreate method. Entry point for app
@@ -43,6 +54,8 @@ namespace AndroidWTVersus
             BottomMenuInitializer();
 
             //Code here
+            Log.Debug("OOOOOOO", "//////////////////////////////////////////////////////////////////////////////////////////////////////////");
+
         }
 
         /// <summary>
@@ -60,6 +73,16 @@ namespace AndroidWTVersus
             itemCompare.SetIconTintList(ColorStateList.ValueOf(Color.ParseColor("#707070")));
             itemStatistics.SetIconTintList(ColorStateList.ValueOf(Color.ParseColor("#dc3546")));
             itemFeedback.SetIconTintList(ColorStateList.ValueOf(Color.ParseColor("#707070")));
+
+            chartbutton = FindViewById<Button>(Resource.Id.chartbutton);
+            statbutton = FindViewById<Button>(Resource.Id.statbutton);
+
+            chartbutton.Click += (s,e)=> {
+                StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wave.skillmeter")));
+            };
+            statbutton.Click += (s, e) => {
+                StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wtwave.wtinsider")));
+            };
         }
 
         /// <summary>

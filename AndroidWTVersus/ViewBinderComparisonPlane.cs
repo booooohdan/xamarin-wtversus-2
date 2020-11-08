@@ -29,17 +29,21 @@ namespace AndroidWTVersus
 
         ImageView ivP_ASMissile1;
         ImageView ivP_AAMissile1;
+        ImageView ivP_AAFoxOneMissile1;
         ImageView ivP_AGMissile1;
         ImageView ivP_HBomb1;
         ImageView ivP_HCannon1;
         ImageView ivP_HTorpedo1;
+        ImageView ivP_HMine1;
         ImageView ivP_WrongMusic1;
         ImageView ivP_ASMissile2;
         ImageView ivP_AAMissile2;
+        ImageView ivP_AAFoxOneMissile2;
         ImageView ivP_AGMissile2;
         ImageView ivP_HBomb2;
         ImageView ivP_HCannon2;
         ImageView ivP_HTorpedo2;
+        ImageView ivP_HMine2;
         ImageView ivP_WrongMusic2;
 
         TextView tvP_Cannon1;
@@ -154,10 +158,12 @@ namespace AndroidWTVersus
 
             ivP_ASMissile1 = FindViewById<ImageView>(Resource.Id.ivP_ASMissile1);
             ivP_AAMissile1 = FindViewById<ImageView>(Resource.Id.ivP_AAMissile1);
+            ivP_AAFoxOneMissile1 = FindViewById<ImageView>(Resource.Id.ivP_AAFoxOneMissile1);
             ivP_AGMissile1 = FindViewById<ImageView>(Resource.Id.ivP_AGMissile1);
             ivP_HBomb1 = FindViewById<ImageView>(Resource.Id.ivP_HBomb1);
             ivP_HCannon1 = FindViewById<ImageView>(Resource.Id.ivP_HCannon1);
             ivP_HTorpedo1 = FindViewById<ImageView>(Resource.Id.ivP_HTorpedo1);
+            ivP_HMine1 = FindViewById<ImageView>(Resource.Id.ivP_HMine1);
             ivP_WrongMusic1 = FindViewById<ImageView>(Resource.Id.ivP_WrongMusic1);
             ivP_RWR1 = FindViewById<ImageView>(Resource.Id.ivP_RWR1);
             ivP_Turrel1 = FindViewById<ImageView>(Resource.Id.ivP_Turrel1);
@@ -173,10 +179,12 @@ namespace AndroidWTVersus
 
             ivP_ASMissile2 = FindViewById<ImageView>(Resource.Id.ivP_ASMissile2);
             ivP_AAMissile2 = FindViewById<ImageView>(Resource.Id.ivP_AAMissile2);
+            ivP_AAFoxOneMissile2 = FindViewById<ImageView>(Resource.Id.ivP_AAFoxOneMissile2);
             ivP_AGMissile2 = FindViewById<ImageView>(Resource.Id.ivP_AGMissile2);
             ivP_HBomb2 = FindViewById<ImageView>(Resource.Id.ivP_HBomb2);
             ivP_HCannon2 = FindViewById<ImageView>(Resource.Id.ivP_HCannon2);
             ivP_HTorpedo2 = FindViewById<ImageView>(Resource.Id.ivP_HTorpedo2);
+            ivP_HMine2 = FindViewById<ImageView>(Resource.Id.ivP_HMine2);
             ivP_WrongMusic2 = FindViewById<ImageView>(Resource.Id.ivP_WrongMusic2);
             ivP_RWR2 = FindViewById<ImageView>(Resource.Id.ivP_RWR2);
             ivP_Turrel2 = FindViewById<ImageView>(Resource.Id.ivP_Turrel2);

@@ -714,6 +714,13 @@
                         android:id="@+id/ivT_AirSearchRadar1"
                         android:visibility="gone"
                         android:adjustViewBounds="true" />
+                                        <ImageView
+                        android:src="@drawable/RWRTank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_RWR1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/LockAir"
                         android:layout_width="wrap_content"
@@ -839,6 +846,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:id="@+id/ivT_AirSearchRadar2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true" />
+                                        <ImageView
+                        android:src="@drawable/RWRTank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivT_RWR2"
                         android:visibility="gone"
                         android:adjustViewBounds="true" />
                     <ImageView

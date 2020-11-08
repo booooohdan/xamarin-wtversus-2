@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="10.3"
+                    android:text="10.7"
                     android:id="@+id/tvP_BattleRating1"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/battleRating" />
                 <TextView
-                    android:text="10.3"
+                    android:text="10.7"
                     android:id="@+id/tvP_BattleRating2"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="1958"
+                    android:text="1965"
                     android:id="@+id/tvP_FirstYear1"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -133,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="13838"
+                    android:text="16997"
                     android:id="@+id/tvP_RepairCost1"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -146,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/repairCost" />
                 <TextView
-                    android:text="11105"
+                    android:text="14396"
                     android:id="@+id/tvP_RepairCost2"
                     style="@style/BlackTextView"
                     android:layout_width="0dp"
@@ -182,6 +182,12 @@
                         android:layout_height="50dp"
                         android:id="@+id/ivP_AAMissile1"
                         android:adjustViewBounds="true" />
+                                        <ImageView
+                        android:src="@drawable/AAFoxOneMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AAFoxOneMissile1"
+                        android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/AGMissile"
                         android:layout_width="wrap_content"
@@ -207,6 +213,13 @@
                         android:visibility="gone"
                         android:id="@+id/ivP_HTorpedo1"
                         android:adjustViewBounds="true" />
+                     <ImageView
+                        android:src="@drawable/Mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_HMine1"
+                        android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/WrongMusic"
                         android:layout_width="wrap_content"
@@ -231,6 +244,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:id="@+id/ivP_AAMissile2"
+                        android:adjustViewBounds="true" />
+                                        <ImageView
+                        android:src="@drawable/AAFoxOneMissile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/ivP_AAFoxOneMissile2"
                         android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/AGMissile"
@@ -258,6 +277,13 @@
                         android:layout_height="50dp"
                         android:visibility="gone"
                         android:id="@+id/ivP_HTorpedo2"
+                        android:adjustViewBounds="true" />
+                                        <ImageView
+                        android:src="@drawable/Mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:id="@+id/ivP_HMine2"
                         android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/WrongMusic"

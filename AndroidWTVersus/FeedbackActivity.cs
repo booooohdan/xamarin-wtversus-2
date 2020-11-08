@@ -67,13 +67,13 @@ namespace AndroidWTVersus
         private void ButtonVK_Click(object sender, EventArgs e)
         {
             StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
-                .Parse("https://www.vk.com/wtversus/")));
+                .Parse("https://www.vk.com/wave_app/")));
         }
 
         private void ButtonReddit_Click(object sender, EventArgs e)
         {
             StartActivity(new Intent(Intent.ActionView, Android.Net.Uri
-                 .Parse("https://www.reddit.com/r/wtversus/")));
+                 .Parse("https://www.reddit.com/r/wave_app/")));
         }
 
         private void RatingBar_RatingBarChange(object sender, RatingBar.RatingBarChangeEventArgs e)

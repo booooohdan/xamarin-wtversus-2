@@ -22,10 +22,12 @@
   <string name="auCaliber">Вспомогательный калибр</string>
   <string name="battleRating">Боевой рейтинг</string>
   <string name="br">БР: </string>
+  <string name="charts">Помните раздел ТОП в версусе? Сейчас он находится в другом приложении. Загружайте и пользуйтесь!</string>
   <string name="chooseEmailClient">Выберите почтовое приложение</string>
   <string name="climbTo1000">Скороподъёмность (0-1000 м)</string>
   <string name="degree"> °</string>
   <string name="displacement">Водоизмещение</string>
+  <string name="downloadGP">Скачать из Google Play</string>
   <string name="emailMessage">Опишите проблему или ваше предложение</string>
   <string name="emailSend">Отправить</string>
   <string name="enginePower">Мощность двигателя</string>
@@ -81,6 +83,7 @@
   <string name="shipFirstYear">Спуск на воду</string>
   <string name="shipMaxSpeed">Макс скорость</string>
   <string name="ships">Флот</string>
+  <string name="stats">СТАТИСТИКА РАБОТАЕТ. Она перенесена в отдельную программу. Загружайте и пользуйтесь!</string>
   <string name="t"> т</string>
   <string name="tankFirstYear">Первый выезд</string>
   <string name="tanks">Армия</string>

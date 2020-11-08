@@ -99,6 +99,7 @@ namespace AndroidWTVersus
         ImageView ivT_Amphibious1;
         ImageView ivT_AirSearchRadar1;
         ImageView ivT_AirLockRadar1;
+        ImageView ivT_RWR1;
         ImageView ivT_TankSearchRadar1;
 
         ImageView ivT_NVDCommander2;
@@ -118,6 +119,7 @@ namespace AndroidWTVersus
         ImageView ivT_Amphibious2;
         ImageView ivT_AirSearchRadar2;
         ImageView ivT_AirLockRadar2;
+        ImageView ivT_RWR2;
         ImageView ivT_TankSearchRadar2;
 
 
@@ -248,6 +250,7 @@ namespace AndroidWTVersus
             ivT_Amphibious1 = FindViewById<ImageView>(Resource.Id.ivT_Amphibious1);
             ivT_AirSearchRadar1 = FindViewById<ImageView>(Resource.Id.ivT_AirSearchRadar1);
             ivT_AirLockRadar1 = FindViewById<ImageView>(Resource.Id.ivT_AirLockRadar1);
+            ivT_RWR1 = FindViewById<ImageView>(Resource.Id.ivT_RWR1);
             ivT_TankSearchRadar1 = FindViewById<ImageView>(Resource.Id.ivT_TankSearchRadar1);
 
             ivT_NVDCommander2 = FindViewById<ImageView>(Resource.Id.ivT_NVDCommander2);
@@ -267,6 +270,7 @@ namespace AndroidWTVersus
             ivT_Amphibious2 = FindViewById<ImageView>(Resource.Id.ivT_Amphibious2);
             ivT_AirSearchRadar2 = FindViewById<ImageView>(Resource.Id.ivT_AirSearchRadar2);
             ivT_AirLockRadar2 = FindViewById<ImageView>(Resource.Id.ivT_AirLockRadar2);
+            ivT_RWR2 = FindViewById<ImageView>(Resource.Id.ivT_RWR2);
             ivT_TankSearchRadar2 = FindViewById<ImageView>(Resource.Id.ivT_TankSearchRadar2);
 
             tvT_ReducedArmorFrontTurret1 = FindViewById<TextView>(Resource.Id.tvT_ReducedArmorFrontTurret1);

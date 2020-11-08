@@ -309,10 +309,12 @@ namespace AndroidWTVersus
 
             ivP_ASMissile1.Visibility = planeAdapter[e.Position].ASMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_AAMissile1.Visibility = planeAdapter[e.Position].AAMissile ? ViewStates.Visible : ViewStates.Gone;
+            ivP_AAFoxOneMissile1.Visibility = planeAdapter[e.Position].AAFoxOneMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_AGMissile1.Visibility = planeAdapter[e.Position].AGMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_HBomb1.Visibility = planeAdapter[e.Position].HBomb ? ViewStates.Visible : ViewStates.Gone;
             ivP_HCannon1.Visibility = planeAdapter[e.Position].HCannon ? ViewStates.Visible : ViewStates.Gone;
             ivP_HTorpedo1.Visibility = planeAdapter[e.Position].HTorpedo ? ViewStates.Visible : ViewStates.Gone;
+            ivP_HMine1.Visibility = planeAdapter[e.Position].HMine ? ViewStates.Visible : ViewStates.Gone;
             ivP_WrongMusic1.Visibility = planeAdapter[e.Position].WrongMusic ? ViewStates.Visible : ViewStates.Gone;
             ivP_RWR1.Visibility = planeAdapter[e.Position].RWR ? ViewStates.Visible : ViewStates.Gone;
             ivP_Turrel1.Visibility = planeAdapter[e.Position].Turrel ? ViewStates.Visible : ViewStates.Gone;
@@ -340,10 +342,12 @@ namespace AndroidWTVersus
 
             ivP_ASMissile2.Visibility = planeAdapter[e.Position].ASMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_AAMissile2.Visibility = planeAdapter[e.Position].AAMissile ? ViewStates.Visible : ViewStates.Gone;
+            ivP_AAFoxOneMissile2.Visibility = planeAdapter[e.Position].AAFoxOneMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_AGMissile2.Visibility = planeAdapter[e.Position].AGMissile ? ViewStates.Visible : ViewStates.Gone;
             ivP_HBomb2.Visibility = planeAdapter[e.Position].HBomb ? ViewStates.Visible : ViewStates.Gone;
             ivP_HCannon2.Visibility = planeAdapter[e.Position].HCannon ? ViewStates.Visible : ViewStates.Gone;
             ivP_HTorpedo2.Visibility = planeAdapter[e.Position].HTorpedo ? ViewStates.Visible : ViewStates.Gone;
+            ivP_HMine2.Visibility = planeAdapter[e.Position].HMine ? ViewStates.Visible : ViewStates.Gone;
             ivP_WrongMusic2.Visibility = planeAdapter[e.Position].WrongMusic ? ViewStates.Visible : ViewStates.Gone;
             ivP_RWR2.Visibility = planeAdapter[e.Position].RWR ? ViewStates.Visible : ViewStates.Gone;
             ivP_Turrel2.Visibility = planeAdapter[e.Position].Turrel ? ViewStates.Visible : ViewStates.Gone;

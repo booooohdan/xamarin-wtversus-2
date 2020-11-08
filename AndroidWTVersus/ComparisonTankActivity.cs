@@ -351,6 +351,7 @@ namespace AndroidWTVersus
             ivT_Hydropneumatic1.Visibility = tankAdapter[e.Position].Hydropneumatic ? ViewStates.Visible : ViewStates.Gone;
             ivT_Amphibious1.Visibility = tankAdapter[e.Position].Amphibious ? ViewStates.Visible : ViewStates.Gone;
             ivT_AirSearchRadar1.Visibility = tankAdapter[e.Position].AirSearchRadar ? ViewStates.Visible : ViewStates.Gone;
+            ivT_RWR1.Visibility = tankAdapter[e.Position].RWR ? ViewStates.Visible : ViewStates.Gone;
             ivT_AirLockRadar1.Visibility = tankAdapter[e.Position].AirLockRadar ? ViewStates.Visible : ViewStates.Gone;
         }
 
@@ -402,6 +403,7 @@ namespace AndroidWTVersus
             ivT_Hydropneumatic2.Visibility = tankAdapter[e.Position].Hydropneumatic ? ViewStates.Visible : ViewStates.Gone;
             ivT_Amphibious2.Visibility = tankAdapter[e.Position].Amphibious ? ViewStates.Visible : ViewStates.Gone;
             ivT_AirSearchRadar2.Visibility = tankAdapter[e.Position].AirSearchRadar ? ViewStates.Visible : ViewStates.Gone;
+            ivT_RWR2.Visibility = tankAdapter[e.Position].RWR ? ViewStates.Visible : ViewStates.Gone;
             ivT_AirLockRadar2.Visibility = tankAdapter[e.Position].AirLockRadar ? ViewStates.Visible : ViewStates.Gone;
         }
 

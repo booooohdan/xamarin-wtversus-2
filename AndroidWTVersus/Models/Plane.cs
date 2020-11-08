@@ -45,8 +45,10 @@ namespace AndroidWTVersus.Models
 
         public bool ASMissile { get; set; } //НАР
         public bool AAMissile { get; set; }
+        public bool AAFoxOneMissile { get; set; }
         public bool AGMissile { get; set; }
         public bool HCannon { get; set; }
+        public bool HMine { get; set; }
         public bool HBomb { get; set; }
         public bool HTorpedo { get; set; }
         public bool WrongMusic { get; set; }
