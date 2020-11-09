@@ -48,6 +48,10 @@ namespace AndroidWTVersus
         string kg_s;
         string kg;
         string meters;
+
+        protected InterstitialAd mInterstitialAd;
+        int adsCount = 0;
+        int adsNum = 4;
         #endregion
 
         /// <summary>
@@ -68,6 +72,10 @@ namespace AndroidWTVersus
             adView.LoadAd(new AdRequest.Builder().Build());
             //var requestbuilder = new AdRequest.Builder().AddTestDevice("46CCAB8BBCE5B5FFA79C22BEB98029AC");
             //adView.LoadAd(requestbuilder.Build());
+
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.AdUnitId = GetString(Resource.String.adsIntersitialPlane);
+            mInterstitialAd.LoadAd(new AdRequest.Builder().Build());
             #endregion
 
             BindingInterfaceElementsToCode();
@@ -446,6 +454,22 @@ namespace AndroidWTVersus
         private void LetsCompare()
         {
             var comparer = new CompareHelper();
+
+
+            adsCount++;
+            if ((adsCount % adsNum) == 0)
+            {
+                if (mInterstitialAd.IsLoaded)
+                {
+                    mInterstitialAd.Show();
+                }
+                else
+                {
+                    var adRequest = new AdRequest.Builder().Build();
+                    mInterstitialAd.LoadAd(adRequest);
+                }
+            }
+
 
             comparer.CompareWhenLowIsGood(tvP_RepairCost1, tvP_RepairCost2);
             comparer.CompareWhenHighIsGood(tvP_FirstYear1, tvP_FirstYear2);

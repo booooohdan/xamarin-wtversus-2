@@ -6196,355 +6196,367 @@ namespace AndroidWTVersus
 			public const int adsFeedback = 2131558435;
 			
 			// aapt resource value: 0x7F0D0024
-			public const int adsStatistics = 2131558436;
+			public const int adsIntersitialHeli = 2131558436;
 			
 			// aapt resource value: 0x7F0D0025
-			public const int agmCount = 2131558437;
+			public const int adsIntersitialPlane = 2131558437;
 			
 			// aapt resource value: 0x7F0D0026
-			public const int agmPenetration = 2131558438;
+			public const int adsIntersitialShip = 2131558438;
 			
 			// aapt resource value: 0x7F0D0027
-			public const int agmRange = 2131558439;
+			public const int adsIntersitialTank = 2131558439;
 			
 			// aapt resource value: 0x7F0D0028
-			public const int agmSpeed = 2131558440;
+			public const int adsStatistics = 2131558440;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int aircrafts = 2131558441;
+			public const int agmCount = 2131558441;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int alertDialogConnectMessage = 2131558442;
+			public const int agmPenetration = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int alertDialogConnectRetry = 2131558443;
+			public const int agmRange = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int alertDialogConnectTitle = 2131558444;
+			public const int agmSpeed = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int alertDialogLoadingMessage = 2131558445;
+			public const int aircrafts = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int alertDialogLoadingTitle = 2131558446;
+			public const int alertDialogConnectMessage = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int apiHelisUrl = 2131558447;
+			public const int alertDialogConnectRetry = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int apiPlanesUrl = 2131558448;
+			public const int alertDialogConnectTitle = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int apiShipsUrl = 2131558449;
+			public const int alertDialogLoadingMessage = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int apiTanksUrl = 2131558450;
-			
-			// aapt resource value: 0x7F0D0034
-			public const int appbar_scrolling_view_behavior = 2131558452;
+			public const int alertDialogLoadingTitle = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int app_name = 2131558451;
+			public const int apiHelisUrl = 2131558451;
+			
+			// aapt resource value: 0x7F0D0034
+			public const int apiPlanesUrl = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int armorCitadel = 2131558453;
+			public const int apiShipsUrl = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int armorPenetration = 2131558454;
-			
-			// aapt resource value: 0x7F0D0037
-			public const int armorSpecification = 2131558455;
+			public const int apiTanksUrl = 2131558454;
 			
 			// aapt resource value: 0x7F0D0038
-			public const int armorTower = 2131558456;
+			public const int appbar_scrolling_view_behavior = 2131558456;
+			
+			// aapt resource value: 0x7F0D0037
+			public const int app_name = 2131558455;
 			
 			// aapt resource value: 0x7F0D0039
-			public const int asmCount = 2131558457;
+			public const int armorCitadel = 2131558457;
 			
 			// aapt resource value: 0x7F0D003A
-			public const int auCaliber = 2131558458;
+			public const int armorPenetration = 2131558458;
 			
 			// aapt resource value: 0x7F0D003B
-			public const int battleRating = 2131558459;
+			public const int armorSpecification = 2131558459;
 			
 			// aapt resource value: 0x7F0D003C
-			public const int bottom_sheet_behavior = 2131558460;
+			public const int armorTower = 2131558460;
 			
 			// aapt resource value: 0x7F0D003D
-			public const int br = 2131558461;
+			public const int asmCount = 2131558461;
 			
 			// aapt resource value: 0x7F0D003E
-			public const int character_counter_content_description = 2131558462;
+			public const int auCaliber = 2131558462;
 			
 			// aapt resource value: 0x7F0D003F
-			public const int character_counter_pattern = 2131558463;
+			public const int battleRating = 2131558463;
 			
 			// aapt resource value: 0x7F0D0040
-			public const int charts = 2131558464;
+			public const int bottom_sheet_behavior = 2131558464;
 			
 			// aapt resource value: 0x7F0D0041
-			public const int chooseEmailClient = 2131558465;
+			public const int br = 2131558465;
 			
 			// aapt resource value: 0x7F0D0042
-			public const int climbTo1000 = 2131558466;
+			public const int character_counter_content_description = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int common_google_play_services_unknown_issue = 2131558467;
+			public const int character_counter_pattern = 2131558467;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int degree = 2131558468;
+			public const int charts = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int displacement = 2131558469;
+			public const int chooseEmailClient = 2131558469;
 			
 			// aapt resource value: 0x7F0D0046
-			public const int downloadGP = 2131558470;
+			public const int climbTo1000 = 2131558470;
 			
 			// aapt resource value: 0x7F0D0047
-			public const int emailMessage = 2131558471;
+			public const int common_google_play_services_unknown_issue = 2131558471;
 			
 			// aapt resource value: 0x7F0D0048
-			public const int emailSend = 2131558472;
+			public const int degree = 2131558472;
 			
 			// aapt resource value: 0x7F0D0049
-			public const int enginePower = 2131558473;
+			public const int displacement = 2131558473;
 			
 			// aapt resource value: 0x7F0D004A
-			public const int fab_transformation_scrim_behavior = 2131558474;
+			public const int downloadGP = 2131558474;
 			
 			// aapt resource value: 0x7F0D004B
-			public const int fab_transformation_sheet_behavior = 2131558475;
+			public const int emailMessage = 2131558475;
 			
 			// aapt resource value: 0x7F0D004C
-			public const int flightSpecification = 2131558476;
+			public const int emailSend = 2131558476;
 			
 			// aapt resource value: 0x7F0D004D
-			public const int floatingSpecification = 2131558477;
+			public const int enginePower = 2131558477;
 			
 			// aapt resource value: 0x7F0D004E
-			public const int followUs = 2131558478;
+			public const int fab_transformation_scrim_behavior = 2131558478;
 			
 			// aapt resource value: 0x7F0D004F
-			public const int gunDepression = 2131558479;
-			
-			// aapt resource value: 0x7F0D0051
-			public const int helis = 2131558481;
-			
-			// aapt resource value: 0x7F0D0052
-			public const int hide_bottom_view_on_scroll_behavior = 2131558482;
+			public const int fab_transformation_sheet_behavior = 2131558479;
 			
 			// aapt resource value: 0x7F0D0050
-			public const int h_p = 2131558480;
+			public const int flightSpecification = 2131558480;
+			
+			// aapt resource value: 0x7F0D0051
+			public const int floatingSpecification = 2131558481;
+			
+			// aapt resource value: 0x7F0D0052
+			public const int followUs = 2131558482;
 			
 			// aapt resource value: 0x7F0D0053
-			public const int inDevelop = 2131558483;
-			
-			// aapt resource value: 0x7F0D0054
-			public const int kg = 2131558484;
+			public const int gunDepression = 2131558483;
 			
 			// aapt resource value: 0x7F0D0055
-			public const int kg_s = 2131558485;
+			public const int helis = 2131558485;
 			
 			// aapt resource value: 0x7F0D0056
-			public const int km_h = 2131558486;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558486;
 			
-			// aapt resource value: 0x7F0D0058
-			public const int mainCaliber = 2131558488;
-			
-			// aapt resource value: 0x7F0D0059
-			public const int mainCaliberReload = 2131558489;
-			
-			// aapt resource value: 0x7F0D005A
-			public const int maxReverseSpeed = 2131558490;
-			
-			// aapt resource value: 0x7F0D005B
-			public const int maxSpeed = 2131558491;
-			
-			// aapt resource value: 0x7F0D005C
-			public const int maxSpeedAtRoad = 2131558492;
-			
-			// aapt resource value: 0x7F0D005D
-			public const int maxSpeedAtTerrain = 2131558493;
-			
-			// aapt resource value: 0x7F0D005E
-			public const int meters = 2131558494;
-			
-			// aapt resource value: 0x7F0D005F
-			public const int mm = 2131558495;
-			
-			// aapt resource value: 0x7F0D0060
-			public const int mtrl_chip_close_icon_content_description = 2131558496;
-			
-			// aapt resource value: 0x7F0D0061
-			public const int muzzleVelocity = 2131558497;
+			// aapt resource value: 0x7F0D0054
+			public const int h_p = 2131558484;
 			
 			// aapt resource value: 0x7F0D0057
-			public const int m_s = 2131558487;
+			public const int inDevelop = 2131558487;
+			
+			// aapt resource value: 0x7F0D0058
+			public const int kg = 2131558488;
+			
+			// aapt resource value: 0x7F0D0059
+			public const int kg_s = 2131558489;
+			
+			// aapt resource value: 0x7F0D005A
+			public const int km_h = 2131558490;
+			
+			// aapt resource value: 0x7F0D005C
+			public const int mainCaliber = 2131558492;
+			
+			// aapt resource value: 0x7F0D005D
+			public const int mainCaliberReload = 2131558493;
+			
+			// aapt resource value: 0x7F0D005E
+			public const int maxReverseSpeed = 2131558494;
+			
+			// aapt resource value: 0x7F0D005F
+			public const int maxSpeed = 2131558495;
+			
+			// aapt resource value: 0x7F0D0060
+			public const int maxSpeedAtRoad = 2131558496;
+			
+			// aapt resource value: 0x7F0D0061
+			public const int maxSpeedAtTerrain = 2131558497;
 			
 			// aapt resource value: 0x7F0D0062
-			public const int nineDegree = 2131558498;
+			public const int meters = 2131558498;
 			
 			// aapt resource value: 0x7F0D0063
-			public const int password_toggle_content_description = 2131558499;
+			public const int mm = 2131558499;
 			
 			// aapt resource value: 0x7F0D0064
-			public const int path_password_eye = 2131558500;
+			public const int mtrl_chip_close_icon_content_description = 2131558500;
 			
 			// aapt resource value: 0x7F0D0065
-			public const int path_password_eye_mask_strike_through = 2131558501;
+			public const int muzzleVelocity = 2131558501;
+			
+			// aapt resource value: 0x7F0D005B
+			public const int m_s = 2131558491;
 			
 			// aapt resource value: 0x7F0D0066
-			public const int path_password_eye_mask_visible = 2131558502;
+			public const int nineDegree = 2131558502;
 			
 			// aapt resource value: 0x7F0D0067
-			public const int path_password_strike_through = 2131558503;
+			public const int password_toggle_content_description = 2131558503;
 			
 			// aapt resource value: 0x7F0D0068
-			public const int planeBombsPayload = 2131558504;
+			public const int path_password_eye = 2131558504;
 			
 			// aapt resource value: 0x7F0D0069
-			public const int planeBurstMass = 2131558505;
+			public const int path_password_eye_mask_strike_through = 2131558505;
 			
 			// aapt resource value: 0x7F0D006A
-			public const int planeClimb = 2131558506;
+			public const int path_password_eye_mask_visible = 2131558506;
 			
 			// aapt resource value: 0x7F0D006B
-			public const int planeFirstYear = 2131558507;
+			public const int path_password_strike_through = 2131558507;
 			
 			// aapt resource value: 0x7F0D006C
-			public const int planeFlutter = 2131558508;
+			public const int planeBombsPayload = 2131558508;
 			
 			// aapt resource value: 0x7F0D006D
-			public const int planeMaxSpeedAt0m = 2131558509;
+			public const int planeBurstMass = 2131558509;
 			
 			// aapt resource value: 0x7F0D006E
-			public const int planeMaxSpeedAt5000m = 2131558510;
+			public const int planeClimb = 2131558510;
 			
 			// aapt resource value: 0x7F0D006F
-			public const int planeOptimalAilerons = 2131558511;
+			public const int planeFirstYear = 2131558511;
 			
 			// aapt resource value: 0x7F0D0070
-			public const int planeOptimalAltitude = 2131558512;
+			public const int planeFlutter = 2131558512;
 			
 			// aapt resource value: 0x7F0D0071
-			public const int planeOptimalElevator = 2131558513;
+			public const int planeMaxSpeedAt0m = 2131558513;
 			
 			// aapt resource value: 0x7F0D0072
-			public const int planeTakeOffWeight = 2131558514;
+			public const int planeMaxSpeedAt5000m = 2131558514;
 			
 			// aapt resource value: 0x7F0D0073
-			public const int planeTurnTime = 2131558515;
+			public const int planeOptimalAilerons = 2131558515;
 			
 			// aapt resource value: 0x7F0D0074
-			public const int plane_PowerToWeight = 2131558516;
+			public const int planeOptimalAltitude = 2131558516;
 			
 			// aapt resource value: 0x7F0D0075
-			public const int rank = 2131558517;
+			public const int planeOptimalElevator = 2131558517;
 			
 			// aapt resource value: 0x7F0D0076
-			public const int rateUs = 2131558518;
+			public const int planeTakeOffWeight = 2131558518;
 			
 			// aapt resource value: 0x7F0D0077
-			public const int reducedArmorBottomSheet = 2131558519;
+			public const int planeTurnTime = 2131558519;
 			
 			// aapt resource value: 0x7F0D0078
-			public const int reducedArmorFrontTurret = 2131558520;
+			public const int plane_PowerToWeight = 2131558520;
 			
 			// aapt resource value: 0x7F0D0079
-			public const int reducedArmorTopSheet = 2131558521;
+			public const int rank = 2131558521;
 			
 			// aapt resource value: 0x7F0D007A
-			public const int reloadTime = 2131558522;
+			public const int rateUs = 2131558522;
 			
 			// aapt resource value: 0x7F0D007B
-			public const int repair = 2131558523;
+			public const int reducedArmorBottomSheet = 2131558523;
 			
 			// aapt resource value: 0x7F0D007C
-			public const int repairCost = 2131558524;
+			public const int reducedArmorFrontTurret = 2131558524;
 			
 			// aapt resource value: 0x7F0D007D
-			public const int reportAnError = 2131558525;
+			public const int reducedArmorTopSheet = 2131558525;
 			
 			// aapt resource value: 0x7F0D007E
-			public const int ridingSpecifications = 2131558526;
+			public const int reloadTime = 2131558526;
 			
 			// aapt resource value: 0x7F0D007F
-			public const int s = 2131558527;
+			public const int repair = 2131558527;
 			
 			// aapt resource value: 0x7F0D0080
-			public const int search_menu_title = 2131558528;
+			public const int repairCost = 2131558528;
 			
 			// aapt resource value: 0x7F0D0081
-			public const int select = 2131558529;
+			public const int reportAnError = 2131558529;
 			
 			// aapt resource value: 0x7F0D0082
-			public const int shipAcceleration = 2131558530;
+			public const int ridingSpecifications = 2131558530;
 			
 			// aapt resource value: 0x7F0D0083
-			public const int shipBrakingTime = 2131558531;
+			public const int s = 2131558531;
 			
 			// aapt resource value: 0x7F0D0084
-			public const int shipCrew = 2131558532;
+			public const int search_menu_title = 2131558532;
 			
 			// aapt resource value: 0x7F0D0085
-			public const int shipFirstYear = 2131558533;
+			public const int select = 2131558533;
 			
 			// aapt resource value: 0x7F0D0086
-			public const int shipMaxSpeed = 2131558534;
+			public const int shipAcceleration = 2131558534;
 			
 			// aapt resource value: 0x7F0D0087
-			public const int ships = 2131558535;
+			public const int shipBrakingTime = 2131558535;
 			
 			// aapt resource value: 0x7F0D0088
-			public const int stats = 2131558536;
+			public const int shipCrew = 2131558536;
 			
 			// aapt resource value: 0x7F0D0089
-			public const int status_bar_notification_info_overflow = 2131558537;
+			public const int shipFirstYear = 2131558537;
 			
 			// aapt resource value: 0x7F0D008A
-			public const int t = 2131558538;
+			public const int shipMaxSpeed = 2131558538;
 			
 			// aapt resource value: 0x7F0D008B
-			public const int tankFirstYear = 2131558539;
+			public const int ships = 2131558539;
 			
 			// aapt resource value: 0x7F0D008C
-			public const int tanks = 2131558540;
+			public const int stats = 2131558540;
 			
 			// aapt resource value: 0x7F0D008D
-			public const int tenDegree = 2131558541;
+			public const int status_bar_notification_info_overflow = 2131558541;
 			
 			// aapt resource value: 0x7F0D008E
-			public const int title_compare = 2131558542;
+			public const int t = 2131558542;
 			
 			// aapt resource value: 0x7F0D008F
-			public const int title_feedback = 2131558543;
+			public const int tankFirstYear = 2131558543;
 			
 			// aapt resource value: 0x7F0D0090
-			public const int title_statistics = 2131558544;
+			public const int tanks = 2131558544;
 			
 			// aapt resource value: 0x7F0D0091
-			public const int torpedoCount = 2131558545;
+			public const int tenDegree = 2131558545;
 			
 			// aapt resource value: 0x7F0D0092
-			public const int torpedoExplosiveMass = 2131558546;
+			public const int title_compare = 2131558546;
 			
 			// aapt resource value: 0x7F0D0093
-			public const int torpedoMaxSpeed = 2131558547;
+			public const int title_feedback = 2131558547;
 			
 			// aapt resource value: 0x7F0D0094
-			public const int tryOurGame = 2131558548;
+			public const int title_statistics = 2131558548;
 			
 			// aapt resource value: 0x7F0D0095
-			public const int turnHullTime = 2131558549;
+			public const int torpedoCount = 2131558549;
 			
 			// aapt resource value: 0x7F0D0096
-			public const int turnTurretTime = 2131558550;
+			public const int torpedoExplosiveMass = 2131558550;
 			
 			// aapt resource value: 0x7F0D0097
-			public const int weaponSpecification = 2131558551;
+			public const int torpedoMaxSpeed = 2131558551;
 			
 			// aapt resource value: 0x7F0D0098
-			public const int weight = 2131558552;
+			public const int tryOurGame = 2131558552;
+			
+			// aapt resource value: 0x7F0D0099
+			public const int turnHullTime = 2131558553;
+			
+			// aapt resource value: 0x7F0D009A
+			public const int turnTurretTime = 2131558554;
+			
+			// aapt resource value: 0x7F0D009B
+			public const int weaponSpecification = 2131558555;
+			
+			// aapt resource value: 0x7F0D009C
+			public const int weight = 2131558556;
 			
 			static String()
 			{

@@ -77,10 +77,10 @@ namespace AndroidWTVersus
             chartbutton = FindViewById<Button>(Resource.Id.chartbutton);
             statbutton = FindViewById<Button>(Resource.Id.statbutton);
 
-            chartbutton.Click += (s,e)=> {
+            statbutton.Click += (s,e)=> {
                 StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wave.skillmeter")));
             };
-            statbutton.Click += (s, e) => {
+            chartbutton.Click += (s, e) => {
                 StartActivity(new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://play.google.com/store/apps/details?id=com.wtwave.wtinsider")));
             };
         }
