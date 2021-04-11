@@ -687,13 +687,6 @@
                         android:id="@+id/ivT_Stabilizer1"
                         android:adjustViewBounds="true" />
                     <ImageView
-                        android:src="@drawable/HullBreak"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:id="@+id/ivT_HullBreak1"
-                        android:visibility="gone"
-                        android:adjustViewBounds="true" />
-                    <ImageView
                         android:src="@drawable/Hydropneumatic"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
@@ -819,13 +812,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:id="@+id/ivT_Stabilizer2"
-                        android:adjustViewBounds="true" />
-                    <ImageView
-                        android:src="@drawable/HullBreak"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:id="@+id/ivT_HullBreak2"
-                        android:visibility="gone"
                         android:adjustViewBounds="true" />
                     <ImageView
                         android:src="@drawable/Hydropneumatic"

@@ -83,7 +83,6 @@ namespace AndroidWTVersus.Models
         public bool AutoLoader { get; set; }
         public bool AAMachineGun { get; set; }
         public bool Stabilizer { get; set; }
-        public bool HullBreak { get; set; }
         public bool NVDGunner { get; set; }
         public bool ThermalGunner { get; set; }
         public bool NVDCommander { get; set; }

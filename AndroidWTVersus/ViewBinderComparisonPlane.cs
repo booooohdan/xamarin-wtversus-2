@@ -90,8 +90,6 @@ namespace AndroidWTVersus
         TextView tvP_TakeOffWeight2;
         TextView tvP_Flutter1;
         TextView tvP_Flutter2;
-        TextView tvP_OptimalAltitude1;
-        TextView tvP_OptimalAltitude2;
         TextView tvP_OptimalElevator1;
         TextView tvP_OptimalElevator2;
         TextView tvP_OptimalAilerons1;
@@ -138,7 +136,6 @@ namespace AndroidWTVersus
             tvP_EnginePower1 = FindViewById<TextView>(Resource.Id.tvP_EnginePower1);
             tvP_TakeOffWeight1 = FindViewById<TextView>(Resource.Id.tvP_TakeOffWeight1);
             tvP_Flutter1 = FindViewById<TextView>(Resource.Id.tvP_Flutter1);
-            tvP_OptimalAltitude1 = FindViewById<TextView>(Resource.Id.tvP_OptimalAltitude1);
             tvP_OptimalElevator1 = FindViewById<TextView>(Resource.Id.tvP_OptimalElevator1);
             tvP_OptimalAilerons1 = FindViewById<TextView>(Resource.Id.tvP_OptimalAilerons1);
             tvP_BurstMass2 = FindViewById<TextView>(Resource.Id.tvP_BurstMass2);
@@ -150,7 +147,6 @@ namespace AndroidWTVersus
             tvP_EnginePower2 = FindViewById<TextView>(Resource.Id.tvP_EnginePower2);
             tvP_TakeOffWeight2 = FindViewById<TextView>(Resource.Id.tvP_TakeOffWeight2);
             tvP_Flutter2 = FindViewById<TextView>(Resource.Id.tvP_Flutter2);
-            tvP_OptimalAltitude2 = FindViewById<TextView>(Resource.Id.tvP_OptimalAltitude2);
             tvP_OptimalElevator2 = FindViewById<TextView>(Resource.Id.tvP_OptimalElevator2);
             tvP_OptimalAilerons2 = FindViewById<TextView>(Resource.Id.tvP_OptimalAilerons2);
             tvP_PowerToWeight1 = FindViewById<TextView>(Resource.Id.tvP_PowerToWeight1);

@@ -394,7 +394,6 @@ namespace AndroidWTVersus
             tvP_EnginePower1.SetText(planeAdapter[e.Position].EnginePower.ToString(), TextNormal);
             tvP_TakeOffWeight1.SetText(planeAdapter[e.Position].Weight + kg, TextNormal);
             tvP_Flutter1.SetText(planeAdapter[e.Position].Flutter + km_h, TextNormal);
-            tvP_OptimalAltitude1.SetText(planeAdapter[e.Position].OptimalAlitude + meters, TextNormal);
             tvP_OptimalElevator1.SetText(planeAdapter[e.Position].OptimalElevator + km_h, TextNormal);
             tvP_OptimalAilerons1.SetText(planeAdapter[e.Position].OptimalAilerons + km_h, TextNormal);
 
@@ -433,7 +432,6 @@ namespace AndroidWTVersus
             tvP_EnginePower2.SetText(planeAdapter[e.Position].EnginePower.ToString(), TextNormal);
             tvP_TakeOffWeight2.SetText(planeAdapter[e.Position].Weight + kg, TextNormal);
             tvP_Flutter2.SetText(planeAdapter[e.Position].Flutter + km_h, TextNormal);
-            tvP_OptimalAltitude2.SetText(planeAdapter[e.Position].OptimalAlitude + meters, TextNormal);
             tvP_OptimalElevator2.SetText(planeAdapter[e.Position].OptimalElevator + km_h, TextNormal);
             tvP_OptimalAilerons2.SetText(planeAdapter[e.Position].OptimalAilerons + km_h, TextNormal);
 
@@ -483,7 +481,6 @@ namespace AndroidWTVersus
             comparer.CompareWhenHighIsGood(tvP_EnginePower1, tvP_EnginePower2);
             comparer.CompareWhenLowIsGood(tvP_TakeOffWeight1, tvP_TakeOffWeight2);
             comparer.CompareWhenHighIsGood(tvP_Flutter1, tvP_Flutter2);
-            comparer.CompareWhenHighIsGood(tvP_OptimalAltitude1, tvP_OptimalAltitude2);
             comparer.CompareWhenHighIsGood(tvP_OptimalElevator1, tvP_OptimalElevator2);
             comparer.CompareWhenHighIsGood(tvP_OptimalAilerons1, tvP_OptimalAilerons2);
             comparer.CompareWhenHighIsGood(tvP_PowerToWeight1, tvP_PowerToWeight2);

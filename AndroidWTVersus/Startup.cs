@@ -17,7 +17,7 @@ using AndroidWTVersus.XmlHandler;
 
 namespace AndroidWTVersus
 {
-    [Activity(Label = "WT Versus 2", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
+    [Activity(Label = "Versus", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation=ScreenOrientation.Portrait)]
     public class Startup:AppCompatActivity
     {
         #region Variables
@@ -179,7 +179,7 @@ namespace AndroidWTVersus
         private async Task GetShipsListFromApiAsync()
         {
             RunOnUiThread(() => {
-                debugTextView.SetText("loading your mom", TextView.BufferType.Normal);
+                debugTextView.SetText("loading ships", TextView.BufferType.Normal);
             });
             string URL = context.Resources.GetString(Resource.String.apiShipsUrl);
             ApiXmlReaderInitial initial = new ApiXmlReaderInitial();

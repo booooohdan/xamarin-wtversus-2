@@ -94,7 +94,6 @@ namespace AndroidWTVersus
         ImageView ivT_AutoLoader1;
         ImageView ivT_AAMachineGun1;
         ImageView ivT_Stabilizer1;
-        ImageView ivT_HullBreak1;
         ImageView ivT_Hydropneumatic1;
         ImageView ivT_Amphibious1;
         ImageView ivT_AirSearchRadar1;
@@ -114,7 +113,6 @@ namespace AndroidWTVersus
         ImageView ivT_AutoLoader2;
         ImageView ivT_AAMachineGun2;
         ImageView ivT_Stabilizer2;
-        ImageView ivT_HullBreak2;
         ImageView ivT_Hydropneumatic2;
         ImageView ivT_Amphibious2;
         ImageView ivT_AirSearchRadar2;
@@ -245,7 +243,6 @@ namespace AndroidWTVersus
             ivT_AutoLoader1 = FindViewById<ImageView>(Resource.Id.ivT_AutoLoader1);
             ivT_AAMachineGun1 = FindViewById<ImageView>(Resource.Id.ivT_AAMachineGun1);
             ivT_Stabilizer1 = FindViewById<ImageView>(Resource.Id.ivT_Stabilizer1);
-            ivT_HullBreak1 = FindViewById<ImageView>(Resource.Id.ivT_HullBreak1);
             ivT_Hydropneumatic1 = FindViewById<ImageView>(Resource.Id.ivT_Hydropneumatic1);
             ivT_Amphibious1 = FindViewById<ImageView>(Resource.Id.ivT_Amphibious1);
             ivT_AirSearchRadar1 = FindViewById<ImageView>(Resource.Id.ivT_AirSearchRadar1);
@@ -265,7 +262,6 @@ namespace AndroidWTVersus
             ivT_AutoLoader2 = FindViewById<ImageView>(Resource.Id.ivT_AutoLoader2);
             ivT_AAMachineGun2 = FindViewById<ImageView>(Resource.Id.ivT_AAMachineGun2);
             ivT_Stabilizer2 = FindViewById<ImageView>(Resource.Id.ivT_Stabilizer2);
-            ivT_HullBreak2 = FindViewById<ImageView>(Resource.Id.ivT_HullBreak2);
             ivT_Hydropneumatic2 = FindViewById<ImageView>(Resource.Id.ivT_Hydropneumatic2);
             ivT_Amphibious2 = FindViewById<ImageView>(Resource.Id.ivT_Amphibious2);
             ivT_AirSearchRadar2 = FindViewById<ImageView>(Resource.Id.ivT_AirSearchRadar2);

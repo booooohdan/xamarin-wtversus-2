@@ -778,35 +778,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="5000 m"
-                    android:id="@+id/tvP_OptimalAltitude1"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="25"
-                    android:layout_height="wrap_content"
- />
-                <TextView
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="50"
-                    android:layout_height="wrap_content"
-                    android:text="@string/planeOptimalAltitude" />
-                <TextView
-                    android:text="5000 m"
-                    android:id="@+id/tvP_OptimalAltitude2"
-                    style="@style/BlackTextView"
-                    android:layout_width="0dp"
-                    android:layout_weight="25"
-                    android:layout_height="wrap_content"
- />
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="#ffffffff"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
                     android:text="700 km/h"
                     android:id="@+id/tvP_OptimalElevator1"
                     style="@style/BlackTextView"
